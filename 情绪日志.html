@@ -1,0 +1,827 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @font-face {
+            font-family: 'man';
+            src: url(../img/HuXiaoBoNanShenTi/HuXiaoBoNanShenTi-2.otf);
+        }
+        
+        .bodyall{
+            width: 1800px;
+            height: 1080px;
+            margin: 0;
+            padding: 0;
+            position: relative;
+            z-index: 1;
+            overflow: hidden;
+        }
+
+        .logo{
+            width: 160px;
+            height: 60px;
+            margin-top: 20px;
+            margin-left: 20px;
+            position: absolute;
+        }
+
+
+        .front1{
+            width: 210px;
+            height: 680px;
+            position: absolute;
+            margin-top: 240px;
+            margin-left: 144px;
+            opacity: 1;
+            z-index: 7;
+        }
+
+
+
+        .front2{
+            width: 210px;
+            height: 680px;
+            position: absolute;
+            margin-top: 240px;
+            margin-left: 436px;
+            z-index: 7;
+        }
+
+
+        .front3{
+            width: 210px;
+            height: 680px;
+            position: absolute;
+            margin-top: 240px;
+            margin-left: 760px;
+            z-index: 7;
+            
+        }
+        .front12{
+            position: absolute;
+            margin-top: 90px;
+            margin-left: -80px;
+            z-index: 8;
+        }
+
+        .front22{
+            position: absolute;
+            margin-top: 90px;
+            margin-left: 440px;
+            z-index: 8;
+            
+        }
+
+       
+       
+
+        .front1, .front2, .front3, .front12 {
+                transition: all 0.3s ease;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        .move-right1 {
+            transform: translateX(340px); /* 调整移动的距离 */
+        }
+
+        .move-right2 {
+            transform: translateX(450px); /* 调整移动的距离 */
+        }
+
+        .back{
+            width: 2000px;
+            height: 800px;
+            margin-top: 300px;
+            margin-left: -200px;
+            position: absolute;
+            z-index: 2;
+        }
+
+        .peopleback{
+            width: 850px;
+            height: 850px;
+            margin-top: 160px;
+            margin-left: 1000px;
+            position: absolute;
+            z-index: 1;
+        }
+        .people{
+            width: 600px;
+            height: 600px;
+            position: absolute;
+            z-index: 3;
+            margin-top: 150px;
+            margin-left: 1000px;
+        }
+        .sun{
+            width: 150px;
+            height: 140px;
+            margin-top: 200px;
+            margin-left: 1500px;
+            position: absolute;
+            z-index: 3;
+        }
+        .right{
+            width: 400px;
+            height: 130px;
+            position: absolute;
+            margin-top: 900px;
+            margin-left: 1500px;
+            z-index: 3;
+        }
+
+        .return{
+            width: 153px;
+            height: 80px;
+            opacity: 1;
+            border-radius: 30px;
+            background: rgba(255, 255, 255, 1);
+            box-shadow: 5px 4px 10px 5px rgba(0, 0, 0, 0.25);
+            margin-top: 970px;
+            margin-left: 10px;
+            z-index: 5;
+            position: absolute;
+            
+            /** 文本1 */
+            font-family: 'man';
+            font-size: 25px;
+            font-weight: 400;
+            letter-spacing: 0px;
+            line-height: 84px;
+            color: rgba(27, 24, 109, 1);
+            text-align: center;
+        }
+        .return a{
+            text-decoration: none;
+        }
+        .return img{
+            padding-top: -5px;
+            padding-left: -30px;
+            vertical-align: middle;
+        }
+        
+        .back2{
+            width: 500px;
+            height: 500px;
+            position: absolute;
+            margin-top: 500px;
+            margin-left: -400px;
+            z-index: 3;
+        }
+        .circle{
+            background: conic-gradient(from 90deg at 50% 50%, rgba(93, 239, 252, 0.16) 0%, rgba(250, 184, 255, 0.05) 26.95%, rgba(238, 172, 252, 0.1) 60.65%, rgba(112, 69, 255, 0.08) 100%);
+            border: 1px solid #4fbdfb;
+            border-radius: 50%;
+            margin-top: -600px;
+            margin-left: 300px;
+            width: 1133px;
+            height: 1133px;
+            position: absolute;
+            z-index: 1;
+
+        }
+
+
+        .time1{
+            width: 540px;
+            height: 150px;
+            position: absolute;
+            margin-top: 34px;
+            margin-left: 680px;
+
+        }
+
+        .time2{
+            opacity: 0;
+            width: 540px;
+            height: 550px;
+            position: absolute;
+            margin-top: -30px;
+            margin-left: 570px;
+            z-index: 10;
+        }
+
+
+        
+        .time1, .time2 {
+           
+            transition: opacity 0.3s ease, transform 0.3s ease; /* 添加过渡效果 */
+        }
+
+        .time2 {
+            opacity: 0; /* 默认透明 */
+            transform: translateY(-10px); /* 向上移动 */
+        }
+
+        .container4:hover .time1 {
+            opacity: 0; /* 悬停时透明 */
+            transform: translateY(10px); /* 向下移动 */
+        }
+
+        .container4:hover .time2 {
+            opacity: 1; /* 悬停时可见 */
+            transform: translateY(0); /* 回到原位 */
+        }
+
+
+        .add{
+            width: 50px;
+            height: 50px;
+            position: absolute;
+            z-index: 5;
+            margin-top: 300px;
+            margin-left: 100px;
+        }
+
+        .delete{
+            width: 50px;
+            height: 50px;
+            position: absolute;
+            z-index: 8;
+            margin-top: 400px;
+            margin-left: 100px;
+        }
+        
+        .front32{
+            position: absolute;
+            margin-top: 90px;
+            margin-left: 760px;
+            z-index: 8;
+            /* opacity: 1; */
+            /* display: flex; */
+            width: 678px;
+            height: 835px;
+            background-image: url(../img/情绪日志-前后端交互框3.png);
+            
+        }
+        .front32-write{
+            position: absolute;
+            margin-top: 70px;
+            margin-left: 70px;
+            font-size: 40px;
+            font-family: 'man';
+            color:black;
+            height: 20px;
+            width: 200px;
+        }
+        .emotionfeel{
+            position: absolute;
+            width: 200px;
+            height: 40px;
+            margin-top: 50px;
+            margin-left: 270px;
+            font-size: 60px;
+            font-family: 'man';
+            color: #4fbdfb;
+        }
+        .content1{
+            width: 400px;
+            height: 400px;
+            position: absolute;
+            
+            margin-top: 130px;
+            margin-left: 70px;
+        }
+        .icon3{
+            width: 200px;
+            height: 200px;
+            z-index: 9;
+            position: absolute;
+            margin-top: 600px;
+            margin-left: 520px;
+        }
+        .little3{
+            width: 400px;
+            height: 400px;
+            /* bg */
+            z-index: 8;
+            position: absolute;
+            margin-top: 250px;
+            margin-left: 500px;
+            background-image: url(../img/情绪日志-小框.png);
+            border-radius: 32px;
+
+        }
+        .time-1{
+            width: 400px;
+            height: 20px;
+            position: absolute;
+            margin-top: 100px;
+            margin-left: 50px;
+            color: black;
+            font-size: 25px;
+            font-family: 'man';
+        }
+        .time-12{
+            font-family: 'man';
+            font-size: 25px;
+            color: #1B186D;
+        }
+        .time-2{
+            width: 400px;
+            height: 20px;
+            position: absolute;
+            margin-top: 130px;
+            margin-left: 50px;
+            color: black;
+            font-size: 25px;
+            font-family: 'man';
+        }
+        .time-22{
+            font-family: 'man';
+            font-size: 25px;
+            color: #1B186D;
+        }
+
+        .now{
+            width: 400px;
+            height: 20px;
+            position: absolute;
+            margin-top: 170px;
+            margin-left: 50px;
+            color: black;
+            font-size: 25px;
+            font-family: 'man';
+        }
+        .currentEmotion1{
+            font-family: 'man';
+            font-size: 25px;
+            color: #1B186D;
+        }
+
+        .strength{
+            width: 400px;
+            height: 20px;
+            position: absolute;
+            margin-top: 210px;
+            margin-left: 50px;
+            color: black;
+            font-size: 25px;
+            font-family: 'man';
+        }
+        .emotionStrength1{
+            font-family: 'man';
+            font-size: 25px;
+            color: #1B186D;
+        }
+
+
+
+
+
+
+
+
+
+        #下拉菜单部分
+        
+        .container {
+            position: absolute;
+            z-index: 10;
+            margin-top: 20px; /* 设置与顶部的间距 */
+        }
+
+        #inputButton {
+            padding: 10px 20px; /* 增大按钮的内边距 */
+            font-size: 16px; /* 增大按钮字体 */
+            margin-top: 200px;
+            margin-left: 30px;
+            background-color: #1B186D;
+            color: white;
+            font-family: 'man';
+        }
+
+        #dropdown {
+            position: absolute;
+            z-index: 10;
+            top: 0; /* 使下拉菜单从按钮下方开始 */
+            margin-left: 1000px;
+            background: #f9f9f9;
+            border: 1px solid #ccc;
+            padding: 15px; /* 增加内边距 */
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+           
+            height: 1050px;
+            width: 800px; /* 增大下拉菜单的宽度 */
+        }
+
+
+
+        #dropdown input {
+            width: 600px; /* 输入框宽度100% */
+            height: 135px;
+            padding: 10px; /* 增大输入框内边距 */
+            margin-bottom: 10px; /* 增加输入框之间的间距 */
+            border: 1px solid #ccc;
+            border-radius: 4px; /* 圆角 */
+            z-index: 10;
+            font-size: 40px;
+            font-family: 'man';
+        }
+
+
+        #submitButton {
+            position: absolute;
+            padding: 10px 20px; /* 增大按钮的内边距 */
+            font-size: 16px; /* 增大按钮字体 */
+            background-color: #1B186D;
+            color: white;
+            font-family: 'man';
+            margin-top: 170px;
+            margin-left: -620px;
+            
+        }
+
+        input::placeholder{
+            font-size: 40px;
+            font-family: 'man';
+        }
+    </style>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+   
+</head>
+<body>
+    <div class="bodyall">
+            <div class="logo">
+                <img src="../img/logo深蓝色更新.png">
+            </div>
+            <div class="front1" onclick="handle1Click()">
+                <img src="../img/更新情绪日志框1.png">
+            </div>
+            <div class="front2" onclick="handle2Click()">
+                <img src="../img/更新情绪日志框2.png">
+            </div>
+            <div class="front3" onclick="handle3Click()">
+                <img src="../img/更新情绪日志框3.png">
+            </div>
+            <div class="front12">
+                <img src="../img/情绪日志-1图.png">
+            </div>
+            <div class="front22">
+                <img src="../img/情绪日志-2图.png">
+            </div>
+            <div class="front32">
+                <!-- <img src="../img/情绪日志-3图.png"> -->
+                <!-- <div><img src="../img/情绪日志-前后端交互框3.png"></div> -->
+                <div class="front32-write">情绪评级</div>
+                <div class="emotionfeel"></div>
+                <div class="content1"></div>
+                <div class="icon3">
+                    <img src="../img/情绪日志-笑脸3.png">
+                </div>
+                <div class="little3">
+                    <div class="time-1">日期： <span class="time-12"></span></div>
+                    <div class="time-2">时间: &nbsp;<span class="time-22"></span></div>
+                    <div class="now">当前情绪: <span class="currentEmotion1"></span></div>
+                    <div class="strength">情绪强度: <span class="emotionStrength1"></span></div>
+                </div>
+            </div>
+            <div class="back"><img src="../img/情绪日志-下图背景"></div>
+            <div class="peopleback"><img src="../img/情绪日志-蓝色背景"></div>
+            <div class="people"><img src="../img/情绪日志-人物"></div>
+            <div class="sun"><img src="../img/情绪日志-太阳"></div>
+            <div class="right"><img src="../img/情绪日志-右下角"></div>
+            <div class="back2"><img src="../img/情绪日志-线条"></div>
+            <div class="circle"></div>
+            <div class="container4">
+                <div class="time1"><img src="../img/更新-日历前.png"></div>
+                <div class="time2"><img src="../img/更新-日历后.png"></div>
+            </div>
+            <div class="add">
+                <a href="添加情绪日志.html">
+                    <img src="../img/情绪日志-添加.png">
+                </a>
+            </div>
+            <div class="delete">
+                <a href="删除情绪日志.html">
+                    <img src="../img/情绪日志-删除.png">
+                </a>
+            </div>
+
+            <div class="return">
+                <a href="功能页.html">
+                    <img src="../img/返回键.png">
+                    返回
+                </a>
+            </div>
+            
+
+
+
+            <div class="container">
+                <button id="inputButton">输入信息</button>
+                <div id="dropdown" class="dropdown-content hidden">
+                    
+                    <input type="text" id="currentEmotion" placeholder="输入当前情绪">
+                    <input type="text" id="emotionStrength" placeholder="输入情绪强度">
+                    <input type="text" id="emotionRank" placeholder="输入情绪评级">
+                    <input type="text" id="content" placeholder="输入正文内容，例如触发事件，思考过程等">
+                    <input type="text" id="createTime" placeholder="输入日期">
+                    <input type="text" id="updateTime" placeholder="输入时间">
+                    <button id="submitButton">提交</button>
+                </div>
+            </div>
+            
+
+        </div>
+</body>
+
+<script>
+    window.onload = function() {
+    const front12 = document.querySelectorAll('.front12');
+    const front22 = document.querySelectorAll('.front22');
+    const front32 = document.querySelectorAll('.front32');
+
+    front12.forEach(el => el.classList.add('hidden'));
+    front22.forEach(el => el.classList.add('hidden'));
+    front32.forEach(el => el.classList.add('hidden'));
+  };
+    
+    
+    
+    function handle1Click() {
+    const front1 = document.querySelector('.front1');
+    const front12 = document.querySelectorAll('.front12');
+    const front2 = document.querySelector('.front2');
+    const front3 = document.querySelector('.front3');
+
+    front1.classList.add('hidden');
+    front2.classList.add('move-right1');
+    front3.classList.add('move-right1');
+    front12.forEach(el => el.classList.remove('hidden'));
+
+    setTimeout(() => {
+      front1.classList.remove('hidden');
+      front2.classList.remove('move-right1');
+      front3.classList.remove('move-right1');
+      front12.forEach(el => el.classList.add('hidden'));
+    }, 5000);
+  }
+
+
+  function handle2Click() {
+    const front1 = document.querySelector('.front1');
+    const front22 = document.querySelectorAll('.front22');
+    const front2 = document.querySelector('.front2');
+    const front3 = document.querySelector('.front3');
+
+    front2.classList.add('hidden');
+    
+    front3.classList.add('move-right2');
+    front22.forEach(el => el.classList.remove('hidden'));
+
+    setTimeout(() => {
+      front2.classList.remove('hidden');
+      
+      front3.classList.remove('move-right2');
+      front22.forEach(el => el.classList.add('hidden'));
+    }, 5000);
+  }
+
+
+  function handle3Click() {
+    const front1 = document.querySelector('.front1');
+    const front32 = document.querySelectorAll('.front32');
+    const front2 = document.querySelector('.front2');
+    const front3 = document.querySelector('.front3');
+
+    front3.classList.add('hidden');
+   
+    front32.forEach(el => el.classList.remove('hidden'));
+
+    setTimeout(() => {
+      front3.classList.remove('hidden');
+   
+      front32.forEach(el => el.classList.add('hidden'));
+    }, 5000);
+  }
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  document.getElementById('inputButton').addEventListener('click', function() {
+            const dropdown = document.getElementById('dropdown');
+            dropdown.classList.toggle('hidden');
+        });
+  
+  
+  
+  
+  document.getElementById('submitButton').addEventListener('click', function() {
+    const currentEmotion = document.getElementById('currentEmotion').value;
+    const emotionStrength = parseInt(document.getElementById('emotionStrength').value);
+    const emotionRank = parseInt(document.getElementById('emotionRank').value);
+    const content = document.getElementById('content').value;
+    const createTime = document.getElementById('createTime').value;
+    const updateTime = document.getElementById('updateTime').value;
+
+    // 创建数据对象
+    const data = {
+        currentEmotion: currentEmotion || "defaultEmotion",
+        emotionStrength: emotionStrength || 5,
+        emotionRank: emotionRank || 1,
+        content: content || "No content available.",
+        createTime:createTime,
+        updateTime:updateTime
+    };
+
+    console.log(data);
+
+    // 将数据对象转换为 JSON 字符串
+    const jsonData = JSON.stringify(data);
+
+    // 模拟发送数据到后端并接收响应
+    axios.post('你的后端接口地址', jsonData, {
+        headers: {
+            'Content-Type': 'application/json' // 确保发送的数据是 JSON 格式
+        }
+    })
+    .then(response => {
+        if (!response.data) {
+            console.error('Received empty or invalid data from server.');
+            return; // 或者处理默认情况
+        }
+        
+        
+        
+        // 在前端渲染响应内容
+        // const outputDiv = document.querySelector('.currentEmotion1');
+        // outputDiv.innerHTML = `<p>输入内容已提交：${JSON.stringify(response.data)}</p>`;
+
+        
+
+        // 将 input1 的值渲染到指定的 <div>
+        const emotionDiv = document.querySelector('.currentEmotion1');
+        emotionDiv.innerHTML += `<div>${response.data.data.currentEmotion}</div>`;
+        
+        // 渲染情绪强度
+        const strengthSpan = document.querySelector('.emotionStrength1');
+        strengthSpan.innerHTML = `${response.data.data.emotionStrength}/10`; // 格式化显示为 "6/10"
+        
+        // 渲染情绪等级
+        let emotionMessage = '';
+        switch (response.data.data.emotionRank) {
+            case 1:
+                emotionMessage = '差';
+                break;
+            case 2:
+                emotionMessage = '较差';
+                break;
+            case 3:
+                emotionMessage = '良好';
+                break;
+            case 4:
+                emotionMessage = '好';
+                break;
+            case 5:
+                emotionMessage = '非常好';
+                break;
+            default:
+                emotionMessage = '无效的情绪等级。';
+        }
+        const emotion3 = document.querySelector('.emotionfeel');
+        emotion3.innerHTML = `<div class="emotionfeel">${emotionMessage}</div>`;
+
+        // 渲染内容
+        const contentDiv = document.querySelector('.content1');
+        contentDiv.innerHTML = `<p>${response.data.data.content}</p>`; // Display input4's content
+        
+        const createTime1 = document.querySelector('.time-12');
+        createTime1.innerHTML = `<p>${response.data.data.createTime}</p>`;
+
+        const createTime2 = document.querySelector('.time-22');
+        createTime2.innerHTML = `<p>${response.data.data.updateTime}</p>`;
+
+        // 清空输入框
+        document.getElementById('currentEmotion').value = '';
+        document.getElementById('emotionStrength').value = '';
+        document.getElementById('emotionRank').value = '';
+        document.getElementById('content').value = '';
+        document.getElementById('createTime').value = '';
+        document.getElementById('updateTime').value = '';
+    })
+    .catch(error => {
+        console.error('Error:', error);
+    });
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//   document.getElementById('inputButton').addEventListener('click', function() {
+//             const dropdown = document.getElementById('dropdown');
+//             dropdown.classList.toggle('hidden');
+//         });
+
+//         document.getElementById('submitButton').addEventListener('click', function() {
+//             const input1 = document.getElementById('currentEmotion').value;
+//             const input2 = parseInt(document.getElementById('emotionStrength').value);
+//             const input3 = parseInt(document.getElementById('emotionRank').value);
+//             const input4 = document.getElementById('content').value;
+
+//             // 这里是模拟与后端的交互
+//             const data = {
+//                 input1,
+//                 input2,
+//                 input3,
+//                 input4
+//             };
+
+//             // 模拟发送数据到后端并接收响应
+//             // 实际应用中，你可以使用fetch或axios进行HTTP请求
+//             axios.post('', data)
+//                 .then(response => {
+//                     // 在前端渲染响应内容
+//                     const outputDiv = document.querySelector('.currentEmotion1');
+//                     // outputDiv.innerHTML = `<p>输入内容已提交：${JSON.stringify(response.data)}</p>`;
+
+//                     // 将 input1 的值渲染到指定的 <div>
+//                     // outputDiv.innerHTML += `<div class="currentEmotion1">${input1}</div>`;
+                    
+//                     const strengthSpan = document.querySelector('.emotionStrength1');
+//                     // strengthSpan.innerHTML = `${input2}/10`; // 格式化显示为 "6/10"
+                
+                
+                    
+//                     let emotionMessage = '';
+//                     switch (input3) {
+//                         case 1:
+//                             emotionMessage = '差';
+//                             break;
+//                         case 2:
+//                             emotionMessage = '较差';
+//                             break;
+//                         case 3:
+//                             emotionMessage = '良好';
+//                             break;
+//                         case 4:
+//                             emotionMessage = '好';
+//                             break;
+//                         case 5:
+//                             emotionMessage = '非常好';
+//                             break;
+//                         default:
+//                             emotionMessage = '无效的情绪等级。';
+//                     }
+//                     const emotion3 = document.querySelector('.emotionfeel');
+//                     // 将情绪信息渲染到 <div class="emotionfeel"></div>
+//                     // emotion3.innerHTML = `<div class="emotionfeel">${emotionMessage}</div>`;
+
+
+
+
+
+
+                
+                
+                
+                
+//                     const contentDiv = document.querySelector('.content1');
+//                     // contentDiv.innerHTML = `<p>${input4}</p>`; // Display input4's content
+
+
+
+//                     document.getElementById('currentEmotion').value = '';
+//                     document.getElementById('emotionStrength').value = '';
+//                     document.getElementById('emotionRank').value = '';
+//                     document.getElementById('content').value = '';
+//                 })
+//                 .catch(error => {
+//                     console.error('Error:', error);
+//                 });
+//         });
+
+  </script>
+</html>

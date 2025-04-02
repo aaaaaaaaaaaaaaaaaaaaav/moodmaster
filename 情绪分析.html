@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @font-face {
+            font-family: 'man';
+            src: url(../img/HuXiaoBoNanShenTi/HuXiaoBoNanShenTi-2.otf);
+        }
+        
+        .bodyall{
+            width: 1800px;
+            height: 1080px;
+            margin: 0;
+            padding: 0;
+            position: relative;
+            z-index: 1;
+            overflow: hidden;
+            background: linear-gradient(180deg, rgba(33, 90, 234, 1) 0%, rgba(79, 189, 251, 1) 100%);
+        }
+        .logo{
+            width: 160px;
+            height: 60px;
+            margin-top: 20px;
+            margin-left: 20px;
+            position: absolute;
+        }
+        .header{
+            width: 800px;
+            height: 210px;
+            opacity: 1;
+            margin-top: 200px;
+            margin-left: 75px;
+            position: absolute;
+            text-shadow: 0px 5px 5px  rgba(0, 0, 0, 0.25);
+            /** 文本1 */
+            font-family: 'man';
+            font-size: 200px;
+            font-weight: 400;
+            letter-spacing: 0px;
+            line-height: 289.6px;
+            color: rgba(255, 255, 255, 1);
+            text-align: left;
+            vertical-align: top;
+            
+        }
+
+
+        .header{
+            width: 100%;
+            transition: transform 5s ease, opacity 5s ease;
+        }
+
+
+        .header.move-up {
+            transform: translateY(-500px); /* 根据需要调整移动的距离 */
+            opacity: 0;
+        }
+
+        .header2{
+            width: 740px;
+            height: 120px;
+            margin-top: 460px;
+            margin-left: 95px;
+            position: absolute;
+            opacity: 1;
+            /** 文本1 */
+            font-family: 'man';
+            font-size: 25px;
+            font-weight: 400;
+            letter-spacing: 0px;
+            line-height: 40px;
+            color: rgba(255, 255, 255, 1);
+            text-align: left;
+            vertical-align: top;
+        }
+        .cloud{
+            width: 1000px;
+            height: 700px;
+            margin-top: 630px;
+            margin-left: -75px;
+            position: absolute;
+
+        }
+
+        .cloud img {
+            width: 100%;
+            transition: transform 5s ease, opacity 5s ease;
+        }
+
+
+        .cloud.animate3 img {
+            transform: scale(0.8) translate(0, 300px); /* Adjust scale and translation as needed */
+            opacity: 0;
+        }
+
+
+        .huo{
+            margin-top: 250px;
+            margin-left: 800px;
+            width: 900px;
+            height: 800px;
+            position: absolute;
+            z-index: 5;
+
+        }
+
+        .huo img {
+            width: 100%;
+            transition: transform 5s ease, opacity 5s ease;
+        }
+
+        .huo.animate img {
+            transform: scale(2) translate(-1100px, 10px); /* 缩放和移动火箭 */
+            opacity: 0;
+        }
+
+
+
+        .cloud2{
+            width: 760px;
+            height: 370px;
+            margin-top: 76px;
+            margin-left: 1300px;
+            position: absolute;
+            z-index: 2;
+        }
+
+        .cloud2 img {
+            width: 100%;
+            transition: transform 5s ease, opacity 5s ease;
+        }
+
+
+        .cloud2.animate2 img {
+            transform: scale(0.8) translate(-100px, -300px); /* Adjust scale and translation as needed */
+            opacity: 0;
+        }
+
+        .back{
+            width: 1600px;
+            height: 760px;
+            margin-top: -330px;
+            margin-left: 450px;
+            position: absolute;
+            z-index: 1;
+        }
+        .click{
+            width: 160px;
+            height: 85px;
+            margin-top: 565px;
+            margin-left: 450px;
+            position: absolute;
+            opacity: 1;
+            
+            /** 文本1 */
+            font-family: 'man';
+            font-size: 25px;
+            font-weight: 400;
+            letter-spacing: 0px;
+            line-height: 85px;
+            color: rgba(255, 255, 255, 1);
+            background:#3A90F4;
+            text-align: center;
+            line-height: 85px;
+            z-index: 8;
+            border-radius: 25px;
+
+            border: 5px solid rgba(255, 255, 255, 1);
+        }
+        .click a{
+            text-decoration: none;
+            color: rgba(255, 255, 255, 1);
+        }
+        .up{
+            width: 60px;
+            height: 60px;
+            position: absolute;
+            margin-top: 430px;
+            margin-left: 1550px;
+            z-index: 5;
+        }
+        .down{
+            width: 60px;
+            height: 60px;
+            position: absolute;
+            margin-top: 650px;
+            margin-left: 1550px;
+            z-index: 5;
+        }
+    
+    </style>
+</head>
+<body>
+    <div class="bodyall">
+        <div class="logo"><img src="../img/logo浅蓝色更新.png"></div>
+        <div class="header" id="write1">
+            情绪分析
+        </div>
+        <div class="header2">采用多任务自监督学习模型 (GMSS)脑电神经反馈 (EEG-NF)<br>生成您的个性化情绪报告，直观展现您的情绪变化</div>
+        <button class="click">
+            <a href="情绪分析2图.html" id="transition-link3">
+                点击生成
+            </a>
+        </button>
+        <div class="cloud" id="cloud12">
+            <img src="../img/情绪分析1-左下云新.png">
+        </div>
+        <div class="huo" id="rocket">
+            <img src="../img/情绪分析1-火箭新.png" alt="Rocket">
+        </div>
+        <!-- <a href="情绪分析2图.html" id="link">Go to Next Page</a> -->
+       
+        <div class="cloud2" id="cloud22">
+            <img src="../img/情绪分析-右上云新.png" alt="Cloud">
+        </div>
+        <div class="back"><img src="../img/情绪分析1-背景线条"></div>
+        <div class="up">
+            <a href="情绪分析2图.html" id="transition-link">
+                <img src="../img/上.png" alt="Up Arrow">
+            </a>
+        </div>
+        <div class="down">
+            <a href="情绪分析0.html">
+                <img src="../img/下.png">
+            </a>
+        </div>
+   
+    </div>
+</body>
+<script>
+    document.getElementById('transition-link').addEventListener('click', function(e) {
+            e.preventDefault(); // 阻止默认的点击行为
+            const rocket = document.getElementById('rocket');
+            rocket.classList.add('animate');
+            setTimeout(() => {
+                window.location.href = e.target.parentElement.href;
+            }, 1500); // 动画持续时间
+        });
+
+        document.getElementById('transition-link').addEventListener('click', function(e) {
+            e.preventDefault(); // 阻止默认跳转行为
+            var cloudLayer = document.getElementById('cloud22');
+            cloudLayer.classList.add('animate2'); // 添加动画类
+
+            // 等待动画完成后再跳转
+            setTimeout(() => {
+                window.location.href = e.target.parentElement.href;
+            }, 1500); // 动画持续时间
+        });
+
+        document.getElementById('transition-link').addEventListener('click', function(e) {
+            e.preventDefault(); // 阻止默认跳转行为
+            var cloudLayer2 = document.getElementById('cloud12');
+            cloudLayer2.classList.add('animate3'); // 添加动画类
+
+            // 等待动画完成后再跳转
+            setTimeout(() => {
+                window.location.href = e.target.parentElement.href;
+            }, 1500); // 动画持续时间
+        });
+
+
+        document.addEventListener('DOMContentLoaded', function() {
+            var link = document.getElementById('transition-link');
+            var header = document.getElementById('write1');
+            
+            link.addEventListener('click', function(event) {
+                event.preventDefault(); // 阻止默认的链接跳转
+                
+                // 给 header 添加一个类来启动动画
+                header.classList.add('move-up');
+
+                // 使用 setTimeout 来确保动画完成后再跳转页面
+                setTimeout(function() {
+                    window.location.href = link.href; // 跳转到新页面
+                }, 1500); // 与 CSS 动画持续时间相匹配
+            });
+        });
+
+
+
+
+        document.getElementById('transition-link3').addEventListener('click', function(e) {
+            e.preventDefault(); // 阻止默认的点击行为
+            const rocket = document.getElementById('rocket');
+            rocket.classList.add('animate');
+            setTimeout(() => {
+                window.location.href = e.target.parentElement.href;
+            }, 1500); // 动画持续时间
+        });
+
+        document.getElementById('transition-link3').addEventListener('click', function(e) {
+            e.preventDefault(); // 阻止默认跳转行为
+            var cloudLayer = document.getElementById('cloud22');
+            cloudLayer.classList.add('animate2'); // 添加动画类
+
+            // 等待动画完成后再跳转
+            setTimeout(() => {
+                window.location.href = e.target.parentElement.href;
+            }, 1500); // 动画持续时间
+        });
+
+        document.getElementById('transition-link3').addEventListener('click', function(e) {
+            e.preventDefault(); // 阻止默认跳转行为
+            var cloudLayer2 = document.getElementById('cloud12');
+            cloudLayer2.classList.add('animate3'); // 添加动画类
+
+            // 等待动画完成后再跳转
+            setTimeout(() => {
+                window.location.href = e.target.parentElement.href;
+            }, 1500); // 动画持续时间
+        });
+
+
+        document.addEventListener('DOMContentLoaded', function() {
+            var link = document.getElementById('transition-link3');
+            var header = document.getElementById('write1');
+            
+            link.addEventListener('click', function(event) {
+                event.preventDefault(); // 阻止默认的链接跳转
+                
+                // 给 header 添加一个类来启动动画
+                header.classList.add('move-up');
+
+                // 使用 setTimeout 来确保动画完成后再跳转页面
+                setTimeout(function() {
+                    window.location.href = link.href; // 跳转到新页面
+                }, 1500); // 与 CSS 动画持续时间相匹配
+            });
+        });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+</script>
+</html>

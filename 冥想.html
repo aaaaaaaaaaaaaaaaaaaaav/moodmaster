@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @font-face {
+            font-family: 'man';
+            src: url(../img/HuXiaoBoNanShenTi/HuXiaoBoNanShenTi-2.otf);
+        }
+        @font-face {
+            font-family: 'man1';
+            src: url(../BerkshireSwash-Regular.ttf);
+        }
+
+        @font-face {
+            font-family: 'man2';
+            src: url(../Caveat/Caveat-Regular.ttf);
+        }
+
+
+        .bodyall{
+            width: 1800px;
+            height: 1080px;
+            margin: 0;
+            padding: 0;
+            position: relative;
+            z-index: 1;
+            overflow: hidden;
+            background-image: url(../img/冥想-线条);
+        }
+        .logo{
+            position: absolute;
+            width: 156px;
+            height: 60px;
+            margin-top: 32px;
+            margin-left: 20px;
+        }
+        .header{
+            position: absolute;
+            width: 525px;
+            height: 132px;
+            margin-top: 290px;
+            margin-left: 95px;
+            opacity: 1;
+            
+            /** 文本1 */
+            font-family: 'man';
+            font-size: 200px;
+            font-weight: 400;
+            letter-spacing: 0px;
+            line-height: 64px;
+            color: rgba(27, 24, 109, 1);
+            text-align: left;
+        }
+        .enjoy{
+            position: absolute;
+            width: 315px;
+            height: 128px;
+            margin-top: 440px;
+            margin-left: 104px;
+            opacity: 1;
+            /** 文本1 */
+            font-family: 'man';
+            font-size: 45px;
+            font-weight: 400;
+            letter-spacing: 0px;
+            line-height: 48px;
+            color: rgba(28, 30, 82, 1);
+            /** 文本2 */
+            font-family: 'man';
+            font-size: 48px;
+            font-weight: 400;
+        }
+        .me{
+            position: absolute;
+            width: 220px;
+            height: 64px;
+            margin-top: 430px;
+            margin-left: 380px;
+            opacity: 1;
+            /** 文本1 */
+            font-family: 'man2';
+            font-size: 48px;
+            font-weight: 700;
+            letter-spacing: 0px;
+            line-height: 64px;
+            color: rgba(253, 128, 97, 1);
+            text-align: left;
+        }
+        .start{
+            width: 162px;
+            height: 40px;
+            position: absolute;
+            margin-top: 540px;
+            margin-left: 100px;
+            opacity: 1;
+            
+            /** 文本1 */
+            font-family: 'man1';
+            font-size: 16px;
+            font-weight: 400;
+            letter-spacing: 0px;
+            line-height: 40px;
+            color: rgba(255, 255, 255, 1);
+            text-align: center;
+            border-radius: 50px;
+            background: rgba(235, 218, 198, 1);
+
+            box-shadow: 0px 4px 4px ;
+        }
+        .back1{
+            width: 1100px;
+            height: 900px;
+            margin-top: 2px;
+            margin-left: 700px;
+            position: absolute;
+            z-index: 1;
+        }
+        .back2{
+            width: 275px;
+            height: 240px;
+            margin-top: 700px;
+            margin-left: 1350px;
+            position: absolute;
+            z-index: 3;
+        }
+        .back3{
+            width: 200px;
+            height: 150px;
+            margin-top: 550px;
+            margin-left: 620px;
+            position: absolute;
+            z-index: 5;
+        }
+        .back4{
+           width: 100px;
+           height: 115px;
+           margin-top: 130px;
+           margin-left: 800px;
+           position: absolute;
+           z-index: 5; 
+        }
+        .return{
+            width: 153px;
+            height: 80px;
+            opacity: 1;
+            border-radius: 30px;
+            background: rgba(255, 255, 255, 1);
+            box-shadow: 5px 4px 10px 5px rgba(0, 0, 0, 0.25);
+            margin-top: 900px;
+            margin-left: 10px;
+            position: absolute;
+            
+            /** 文本1 */
+            font-family: 'man';
+            font-size: 25px;
+            font-weight: 400;
+            letter-spacing: 0px;
+            line-height: 84px;
+            color: rgba(27, 24, 109, 1);
+            text-align: center;
+        }
+
+        .back2 img {
+            transition: transform 0.3s ease; /* 添加平滑过渡效果 */
+        }
+
+        .back2:hover img {
+            transform: translate(-50px, 10px) scale(0.9); /* 鼠标悬停时图片移动和缩小 */
+        }
+
+        .back3 img {
+            transition: transform 0.3s ease; /* 添加平滑过渡效果 */
+        }
+
+        .back3:hover img {
+            transform: translate(-50px, 10px) scale(1.5); /* 鼠标悬停时图片移动和缩小 */
+        }
+
+        .start a{
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: 400;
+            letter-spacing: 0px;
+            line-height: 24px;
+            color: rgba(255, 255, 255, 1);
+            text-align: center;
+            border-radius: 50px;
+            background: rgba(235, 218, 198, 1);
+        }
+        .return a{
+            text-decoration: none;
+        }
+        .return img{
+            padding-top: -5px;
+            padding-left: -30px;
+            vertical-align: middle;
+        }
+    </style>
+</head>
+<body>
+    <div class="bodyall">
+        <div class="logo"><img src="../img/logo深蓝色更新.png"></div>
+        <div class="header">冥想</div>
+        <div class="enjoy">enjoy your</div>
+        <div class="me">meditation</div>
+        <div class="start">
+            <a href="冥想3.html">
+                start now
+            </a>
+        </div>
+        <div class="back1"><img src="../img/冥想-新新.png"></div>
+        <div class="back2"><img src="../img/冥想-咖啡杯"></div>
+        <div class="back3"><img src="../img/冥想-照相机"></div>
+        <div class="back4"><img src="../img/冥想-图标"></div>
+        <div class="return">
+            <a href="情绪调节总页.html">
+                <img src="../img/返回键.png">
+                返回
+            </a>
+        </div>
+    </div>
+</body>
+</html>

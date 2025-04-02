@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @font-face {
+            font-family: 'man';
+            src: url(../img/HuXiaoBoNanShenTi/HuXiaoBoNanShenTi-2.otf);
+        }
+        
+        .bodyall{
+            width: 1800px;
+            height: 1080px;
+            margin: 0;
+            padding: 0;
+            position: relative;
+            z-index: 1;
+            overflow: hidden;
+            
+        }
+        .logo{
+            width: 160px;
+            height: 60px;
+            margin-top: 20px;
+            margin-left: 20px;
+            position: absolute;
+        }
+        .time1{
+            width: 540px;
+            height: 150px;
+            position: absolute;
+            margin-top: 34px;
+            margin-left: 680px;
+
+        }
+
+        .time2{
+            opacity: 0;
+            width: 540px;
+            height: 550px;
+            position: absolute;
+            margin-top: -30px;
+            margin-left: 570px;
+            z-index: 10;
+        }
+
+
+        
+        .time1, .time2 {
+           
+            transition: opacity 0.3s ease, transform 0.3s ease; /* 添加过渡效果 */
+        }
+
+        .time2 {
+            opacity: 0; /* 默认透明 */
+            transform: translateY(-10px); /* 向上移动 */
+        }
+
+        .container4:hover .time1 {
+            opacity: 0; /* 悬停时透明 */
+            transform: translateY(10px); /* 向下移动 */
+        }
+
+        .container4:hover .time2 {
+            opacity: 1; /* 悬停时可见 */
+            transform: translateY(0); /* 回到原位 */
+        }
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        .front1{
+            width: 210px;
+            height: 680px;
+            position: absolute;
+            margin-top: 306px;
+            margin-left: 144px;
+            opacity: 1;
+            z-index: 3;
+        }
+
+        .front1 {
+            transition: transform 0.3s ease; /* 添加变换过渡效果 */
+        }
+
+        .front1:hover {
+            transform: scale(1.2); /* 放大 */
+        }
+
+        .delete {
+            opacity: 0; /* 初始透明 */
+            transition: opacity 0.3s ease; /* 添加透明度过渡效果 */
+            font-family: 'man';
+
+
+            width: 100px;
+            height: 100px;
+            border-radius: 20px;
+            position: absolute;
+            margin-top: 700px;
+            margin-left: 270px;
+            z-index: 8;
+            background-color: rgba(6, 10, 87, 1);
+            color: white;
+            text-align: center;
+            line-height: 100px;
+            font-size: 40px;
+            
+        }
+
+        .container1:hover .delete {
+            opacity: 1; /* 悬停时变为可见 */
+        }
+
+
+
+
+
+        .front2{
+            width: 210px;
+            height: 680px;
+            position: absolute;
+            margin-top: 306px;
+            margin-left: 436px;
+            z-index: 3;
+        }
+
+        .front2 {
+            transition: transform 0.3s ease; /* 添加变换过渡效果 */
+        }
+
+        .front2:hover {
+            transform: scale(1.2); /* 放大 */
+        }
+
+
+        .delete2 {
+            opacity: 0; /* 初始透明 */
+            transition: opacity 0.3s ease; /* 添加透明度过渡效果 */
+            font-family: 'man';
+
+
+            width: 100px;
+            height: 100px;
+            border-radius: 20px;
+            position: absolute;
+            margin-top: 700px;
+            margin-left: 570px;
+            z-index: 8;
+            background-color: rgba(6, 10, 87, 1);
+            color: white;
+            text-align: center;
+            line-height: 100px;
+            font-size: 40px;
+            
+        }
+
+        .container2:hover .delete2 {
+            opacity: 1; /* 悬停时变为可见 */
+        }
+
+        .front3{
+            width: 210px;
+            height: 680px;
+            position: absolute;
+            margin-top: 306px;
+            margin-left: 760px;
+            z-index: 3;
+        }
+
+
+        .front3 {
+            transition: transform 0.3s ease; /* 添加变换过渡效果 */
+        }
+
+        .front3:hover {
+            transform: scale(1.2); /* 放大 */
+        }
+
+
+        .delete3 {
+            opacity: 0; /* 初始透明 */
+            transition: opacity 0.3s ease; /* 添加透明度过渡效果 */
+            
+            font-family: 'man';
+
+            width: 100px;
+            height: 100px;
+            border-radius: 20px;
+            position: absolute;
+            margin-top: 700px;
+            margin-left: 900px;
+            z-index: 8;
+            background-color: rgba(6, 10, 87, 1);
+            color: white;
+            text-align: center;
+            line-height: 100px;
+            font-size: 40px;
+            
+        }
+
+        .container3:hover .delete3 {
+            opacity: 1; /* 悬停时变为可见 */
+        }
+
+
+
+
+
+
+
+
+
+
+
+        .dog{
+            width: 1050px;
+            height: 1050px;
+            position: absolute;
+            margin-top: 200px;
+            margin-left: 1100px;
+            z-index: 3;
+        }
+        .return{
+            width: 153px;
+            height: 80px;
+            opacity: 1;
+            border-radius: 30px;
+            background: rgba(255, 255, 255, 1);
+            box-shadow: 5px 4px 10px 5px rgba(0, 0, 0, 0.25);
+            margin-top: 950px;
+            margin-left: 10px;
+            position: absolute;
+            z-index: 2;
+            
+            /** 文本1 */
+            font-family: 'man';
+            font-size: 25px;
+            font-weight: 400;
+            letter-spacing: 0px;
+            line-height: 84px;
+            color: rgba(27, 24, 109, 1);
+            text-align: center;
+        }
+        .return a{
+            text-decoration: none;
+        }
+        .return img{
+            padding-top: -5px;
+            padding-left: -30px;
+            vertical-align: middle;
+        }
+        .background{
+            width: 1500px;
+            height: 800px;
+            position: absolute;
+            margin-top: -600px;
+            margin-left: -600px;
+            z-index: 2;
+        }
+ 
+    </style>
+</head>
+<body>
+    <div class="bodyall">
+        <div class="logo"><img src="../img/logo深蓝色更新.png"></div>
+        <div class="container4">
+            <div class="time1"><img src="../img/更新-日历前.png"></div>
+            <div class="time2"><img src="../img/更新-日历后.png"></div>
+        </div>
+        <div class="container1">
+            <div class="front1"><img src="../img/更新情绪日志框1.png"></div>
+            <div class="delete">删除</div>
+        </div>
+        
+        <div class="container2">
+            <div class="front2"><img src="../img/更新情绪日志框2.png"></div>
+            <div class="delete2">删除</div>
+        </div>
+        <div class="container3">
+            <div class="front3"><img src="../img/更新情绪日志框3.png"></div>
+            <div class="delete3">删除</div>
+        </div>
+        
+        <div class="dog"><img src="../img/删除-狗"></div>
+        
+        <div class="background"><img src="../img/删除-背景"></div>
+        <div class="return">
+            <a href="情绪日志.html">
+                <img src="../img/返回键.png">
+                返回
+            </a>
+        </div>
+    </div>
+</body>
+</html>

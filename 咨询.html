@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @font-face {
+            font-family: 'man';
+            src: url(../img/HuXiaoBoNanShenTi/HuXiaoBoNanShenTi-2.otf);
+        }
+        
+        .bodyall{
+            width: 1800px;
+            height: 1080px;
+            margin: 0;
+            padding: 0;
+            position: relative;
+            z-index: 1;
+            overflow: hidden;
+            background: linear-gradient(180deg, rgba(27, 24, 109, 1) 0%, rgba(3, 48, 164, 1) 100%);
+        }
+        .logo{
+            width: 160px;
+            height: 60px;
+            margin-top: 20px;
+            margin-left: 20px;
+            position: absolute;
+        }
+        .header1{
+            width: 600px;
+            height: 85px;
+            margin-top: 250px;
+            margin-left: 140px;
+            position: absolute;
+            font-size: 100px;
+            font-weight: 400;
+            letter-spacing: 0px;
+            line-height: 84px;
+            color: rgba(255, 255, 255, 1);
+            text-align: left;
+            vertical-align: top;
+            font-family: 'man';
+        }
+        .english{
+            font-size: 40px;
+            font-weight: 400;
+            letter-spacing: 0px;
+            line-height: 84px;
+            color: rgba(255, 255, 255, 1);
+            text-align: left;
+
+            width: 500px;
+            height: 40px;
+            margin-top: 360px;
+            margin-left: 150px;
+            position: absolute;    
+            font-family: 'man';        
+        }
+        .call{
+            width: 189px;
+            height: 84px;
+            border-radius: 10px;
+            background: rgba(255, 255, 255, 1);
+            font-size: 30px;
+            position: absolute;
+            font-weight: 400;
+            letter-spacing: 0px;
+            line-height: 84px;
+            color: rgba(2, 0, 107, 1);
+            text-align: center;
+            vertical-align: top;
+            margin-top: 540px;
+            margin-left: 150px;
+        }
+        .know{
+            width: 189px;
+            height: 84px;
+            border-radius: 10px;
+            background: rgba(2, 0, 107, 1);
+            font-size: 30px;
+            position: absolute;
+            font-weight: 400;
+            letter-spacing: 0px;
+            line-height: 84px;
+            color: rgba(255, 255, 255, 1);
+            text-align: center;
+            vertical-align: top;
+            margin-top: 540px;
+            margin-left: 350px;
+        }
+        .bottom{
+            width: 2500px;
+            height: 500px;
+            margin-top: 600px;
+            margin-left: -200px;
+            position: absolute;
+            z-index: 2;
+        }
+        .back{
+            width: 1240px;
+            height: 1210px;
+            margin-left: 700px;
+            margin-top: -200px;
+            position: absolute;
+            z-index: 1;
+        }
+        .kuang{
+            width: 800px;
+            height: 750px;
+            z-index: 2;
+            margin-top: 20px;
+            margin-left: 900px;
+            position: absolute;
+        }
+        .doctor{
+            width: 750px;
+            height: 570px;
+            margin-top: 170px;
+            margin-left: 950px;
+            position: absolute;
+            z-index: 3;
+        }
+        .picture{
+            width: 250px;
+            height: 260px;
+            margin-top: 700px;
+            margin-left: 1000px;
+            position: absolute;
+            z-index: 4;
+        }
+        .picture2{
+            width: 200px;
+            height: 250px;
+            margin-top: 40px;
+            margin-left: 1600px;
+            position: absolute;
+            z-index: 4;
+        }
+        .return{
+            width: 153px;
+            height: 80px;
+            opacity: 1;
+            border-radius: 30px;
+            background: rgba(255, 255, 255, 1);
+            box-shadow: 5px 4px 10px 5px rgba(0, 0, 0, 0.25);
+            margin-top: 970px;
+            margin-left: 10px;
+            z-index: 5;
+            position: absolute;
+            
+            /** 文本1 */
+            font-family: 'man';
+            font-size: 25px;
+            font-weight: 400;
+            letter-spacing: 0px;
+            line-height: 84px;
+            color: rgba(27, 24, 109, 1);
+            text-align: center;
+        }
+        .return a{
+            text-decoration: none;
+        }
+        .return img{
+            padding-top: -5px;
+            padding-left: -30px;
+            vertical-align: middle;
+        }
+        .ask1{
+            width: 500px;
+            height: 30px;
+            position: absolute;
+            z-index: 5;
+            margin-top: 450px;
+            margin-left: 130px;
+            border-radius: 30px;
+            font-size: 20px;
+            font-family: 'man';
+            border-color: white; /* 聚焦时边框颜色 */
+            background: linear-gradient(180deg, rgba(27, 24, 109, 1) 0%, rgba(3, 48, 164, 1) 100%);
+         
+        }
+        .ask2{
+            width: 400px;
+            height: 30px;
+            position: absolute;
+            z-index: 5;
+            margin-top: 700px;
+            margin-left: 130px;
+            border-radius: 30px;
+            font-size: 20px;
+            font-family: 'man';
+            border-color: white; /* 聚焦时边框颜色 */
+            background: linear-gradient(180deg, rgba(27, 24, 109, 1) 0%, rgba(3, 48, 164, 1) 100%);
+        }
+        .ask2::placeholder{
+            padding-left: 10px;
+        }
+
+        input[type="text"] {
+            
+            border: 1px solid #ccc;
+            color: white;
+            transition: border-color 0.3s; /* 平滑过渡效果 */
+        }
+
+        input[type="text"]:focus {
+            border-color: #007BFF; /* 聚焦时边框颜色 */
+            outline: none; /* 去掉默认的轮廓 */
+        }
+        .write{
+            width: 200px;
+            height: 200px;
+            position: absolute;
+            z-index: 5;
+            margin-top: 500px;
+            margin-left: 130px;
+        }
+        .submit{
+            width: 100px;
+            height: 30px;
+            position: absolute;
+            z-index: 5;
+            background-color: white;
+            border-radius: 5px;
+            margin-top: 700px;
+            margin-left: 550px;
+            border-radius: 30px;
+            font-size: 20px;
+            font-family: 'man';
+            color: linear-gradient(180deg, rgba(27, 24, 109, 1) 0%, rgba(3, 48, 164, 1) 100%);
+            text-align: center;
+            line-height: 30px;
+        }
+        .circle2{
+            width: 60px;
+            height: 60px;
+            position: absolute;
+            z-index: 5;
+            margin-top: 500px;
+            margin-left: 70px;
+        }
+    </style>
+</head>
+<body>
+    <div class="bodyall">
+        <div class="logo"><img src="../img/logo浅蓝色更新.png"></div>
+        <div class="header1">咨询AI医师</div>
+        <div class="english">view AI professor</div>
+        <input type="text" class="ask1"></input>
+        <div class="circle2"><img src="../img/咨询-紫色按键.png"></div>
+        <input type="text" class="ask2" placeholder="ask me"></input>
+        <div class="submit">
+            <a>
+                submit
+            </a>
+        </div>
+        <div class="write"><img src="../img/咨询-白色框架.png"></div>
+        <div class="back"><img src="../img/咨询线条"></div>
+        <div class="kuang"><img src="../img/咨询-背景框"></div>
+        <div class="doctor"><img src="../img/咨询-大头照"></div>
+        <div class="picture"><img src="../img/咨询-医药袋"></div>
+        <div class="picture2"><img src="../img/咨询-地标"></div>
+        <button class="return">
+            <a href="功能页.html">
+                <img src="../img/返回键.png">
+                返回
+            </a>
+        </button>
+        <div class="bottom"><img src="../img/咨询-下半白框"></div>
+    </div>
+</body>
+</html>

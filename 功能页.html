@@ -1,0 +1,745 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @font-face {
+            font-family: 'man';
+            src: url(../img/HuXiaoBoNanShenTi/HuXiaoBoNanShenTi-2.otf);
+        }
+        
+        .bodyall{
+            width: 1800px;
+            height: 1080px;
+            margin: 0;
+            padding: 0;
+            position: relative;
+            z-index: 1;
+            overflow: hidden;
+        }
+        .head{
+            position: absolute;
+            display: flex;
+            width: 400px;
+            height: 60px;
+            margin-top: 15px;
+            margin-left: 15px;
+        }
+        
+        .logo{
+            width: 156px;
+            height: 60px;
+        }
+        .circle1{
+            width: 47px;
+            height: 45px;
+            opacity: 1;
+            border-radius: 50%;
+            background: rgba(6, 10, 87, 1);
+            margin-left: 50px;
+            margin-top: 15px;
+        }
+        .circle2{
+            width: 47px;
+            padding-left: 10px;
+            padding-top: 15px;
+            height: 45px;
+        }
+        .search{
+            width: 80px;
+            height: 800px;
+            margin-top: 160px;
+            margin-left: 2px;
+            position: absolute;
+            opacity: 1;
+            border-radius: 100px;
+            background: rgba(6, 10, 87, 1);
+            list-style-type: none;
+            overflow: hidden;
+        }
+        .search li:first-child{
+            width: 143px;
+            height: 60px;
+            margin-top: 100px;
+            margin-left: -15px;
+
+        }
+        .search li{
+            width: 143px;
+            height: 60px;
+            margin-top: 20px;
+            margin-left: -15px;
+        }
+
+        ul.search li {
+            display: inline-block;
+            
+            
+            position: relative;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+            
+            border-radius: 8px; /* 圆角 */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 阴影 */
+        }
+
+
+       
+
+        ul.search li img {
+            display: block;
+            
+            transition: opacity 0.3s ease;
+        }
+
+        ul.search li:hover {
+            background-color: #f0f0f0; /* 鼠标悬停时的背景颜色 */
+        }
+
+        ul.search li:hover img {
+            opacity: 0;
+        }
+
+        ul.search .a1:hover::before {
+            content: '';
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url(../img/首页-首页2.png); /* 使用data-hover属性中的图片 */
+            background-size: cover;
+            background-position: center;
+            opacity: 1;
+            z-index: 1;
+            border-radius: 8px; /* 圆角 */
+        }
+        ul.search .a1:hover::before {
+            content: '';
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url(../img/首页-首页2.png); /* 使用data-hover属性中的图片 */
+            background-size: cover;
+            background-position: center;
+            opacity: 1;
+            z-index: 1;
+            border-radius: 8px; /* 圆角 */
+        }
+        ul.search .a2:hover::before {
+            content: '';
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url(../img/首页-情绪分析2.png); /* 使用data-hover属性中的图片 */
+            background-size: cover;
+            background-position: center;
+            opacity: 1;
+            z-index: 1;
+            border-radius: 8px; /* 圆角 */
+        }
+
+        ul.search .a3:hover::before {
+            content: '';
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url(../img/首页-情绪调节2.png); /* 使用data-hover属性中的图片 */
+            background-size: cover;
+            background-position: center;
+            opacity: 1;
+            z-index: 1;
+            border-radius: 8px; /* 圆角 */
+        }
+        ul.search .a4:hover::before {
+            content: '';
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url(../img/首页-情绪日志2.png); /* 使用data-hover属性中的图片 */
+            background-size: cover;
+            background-position: center;
+            opacity: 1;
+            z-index: 1;
+            border-radius: 8px; /* 圆角 */
+        }
+        ul.search .a5:hover::before {
+            content: '';
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url(../img/首页-更多2.png); /* 使用data-hover属性中的图片 */
+            background-size: cover;
+            background-position: center;
+            opacity: 1;
+            z-index: 1;
+            border-radius: 8px; /* 圆角 */
+        }
+        ul.search .a6:hover::before {
+            content: '';
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url(../img/首页-设置2.png); /* 使用data-hover属性中的图片 */
+            background-size: cover;
+            background-position: center;
+            opacity: 1;
+            z-index: 1;
+            border-radius: 8px; /* 圆角 */
+        }
+        
+        ul.search .a7:hover::before {
+            content: '';
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url(../img/首页-退出2.png); /* 使用data-hover属性中的图片 */
+            background-size: cover;
+            background-position: center;
+            opacity: 1;
+            z-index: 1;
+            border-radius: 8px; /* 圆角 */
+        }
+
+
+
+
+
+
+
+
+
+        .picture1{
+            width: 528px;
+            height: 480px;
+            opacity: 1;
+            border-radius: 50px;
+            background: rgba(29, 33, 35, 0.05);
+            margin-top: 160px;
+            margin-left: 140px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            position: absolute;
+            backdrop-filter: blur(24px);
+            display: flex;
+        }
+        .picture2{
+            width: 517px;
+            height: 350px;
+            margin-top: 700px;
+            margin-left: 140px;
+            opacity: 1;
+            border-radius:50px;
+            
+            position: absolute;
+            
+
+        }
+        .gaze1{
+            width: 0px;
+            height: 740px;
+            opacity: 1;
+            
+            position: absolute;
+            margin-top: 210px;
+            margin-left: 670px;
+            border: 3px solid rgba(27, 8, 103, 0.56);
+        }
+        .picture4{
+            width: 517px;
+            height: 306px;
+            position: absolute;
+            margin-top: 680px;
+            margin-left: 715px;
+            opacity: 1;
+            border-radius: 50px;
+            background: rgba(29, 33, 35, 0.05);
+
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .ac{
+            padding-top:20px ;
+            padding-left: 15px;
+        }
+        .picture3{
+            width: 612px;
+            height: 520px;
+            background-image: url(../img/页面4-脑子);
+            position: absolute;
+            margin-top: 120px;
+            margin-left: 645px;
+        }
+        .gaze2{
+            width: 0px;
+            height: 740px;
+            opacity: 1;
+            
+            position: absolute;
+            margin-top: 210px;
+            margin-left: 1255px;
+            border: 3px solid rgba(27, 8, 103, 0.56);
+        }
+        .btn1{
+            width: 139px;
+            height: 111px;
+            position: absolute;
+            margin-top: 280px;
+            margin-left: 1280px;
+           
+            opacity: 1;
+            border-radius: 25px;
+            background: rgba(29, 33, 35, 0.05);
+
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .btn1 img{
+            transform: translate(42%, 20%); /* 水平和垂直居中 */
+            
+        }
+
+       
+
+        .btn1 .overlay {
+            position: absolute;
+            top: 50%;
+            left: 0;
+            transform: translateY(-50%) scale(0.8); /* 初始缩小到80% */
+            background: rgba(6, 10, 87, 1);
+            font-family: 'man';
+            color: white;
+            padding: 5px 10px;
+            white-space: nowrap;
+            opacity: 0;
+            transition: opacity 0.3s ease, transform 0.3s ease; /* 添加文字的过渡效果 */
+            z-index: 1;
+            margin-left: 10px; /* 保持文字与图片之间的间距 */
+        }
+
+        .btn1:hover .overlay {
+            opacity: 1;
+            font-family: 'man';
+        }
+
+        .btn1:hover img {
+            transform: translateX(140px) scale(1.8); /* 图片右移20px并放大到1.1倍 */
+        }
+
+        .btn1:hover .overlay {
+            opacity: 1;
+            font-size: 25px;
+            font-family: 'man';
+            transform: translateY(-50%) scale(1); /* 文字恢复到正常大小 */
+        }
+
+        .btn1:hover{
+            background: rgba(6, 10, 87, 1);
+
+        }
+
+
+
+        .btn2{
+            width: 139px;
+            height: 111px;
+            position: absolute;
+            margin-top: 450px;
+            margin-left: 1280px;
+            font-family: 'man';
+            opacity: 1;
+            border-radius: 25px;
+            background: rgba(29, 33, 35, 0.05);
+
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .btn2 img{
+            transform: translate(42%, 20%); /* 水平和垂直居中 */
+            
+        }
+
+       
+
+        .btn2 .overlay {
+            position: absolute;
+            top: 50%;
+            left: 0;
+            transform: translateY(-50%) scale(0.8); /* 初始缩小到80% */
+            background: rgba(6, 10, 87, 1);
+            font-family: 'man';
+            color: white;
+            padding: 5px 10px;
+            white-space: nowrap;
+            opacity: 0;
+            transition: opacity 0.3s ease, transform 0.3s ease; /* 添加文字的过渡效果 */
+            z-index: 1;
+            margin-left: 10px; /* 保持文字与图片之间的间距 */
+        }
+
+        .btn2:hover .overlay {
+            opacity: 1;
+            font-family: 'man';
+        }
+
+        .btn2:hover img {
+            transform: translateX(150px) scale(1.8); /* 图片右移20px并放大到1.1倍 */
+        }
+
+        .btn2:hover .overlay {
+            opacity: 1;
+            font-size: 25px;
+            font-family: 'man';
+            transform: translateY(-50%) scale(1); /* 文字恢复到正常大小 */
+        }
+
+        .btn2:hover{
+            background: rgba(6, 10, 87, 1);
+
+        }
+
+
+        .btn3{
+            width: 139px;
+            height: 111px;
+            position: absolute;
+            margin-top: 620px;
+            margin-left: 1280px;
+            z-index: 4;
+            opacity: 1;
+            border-radius: 25px;
+            background: rgba(29, 33, 35, 0.05);
+            font-family: 'man';
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .btn3 img{
+            transform: translate(32%, 20%); /* 水平和垂直居中 */
+            
+        }
+
+       
+
+        .btn3 .overlay {
+            position: absolute;
+            top: 50%;
+            left: 0;
+            transform: translateY(-50%) scale(0.8); /* 初始缩小到80% */
+            background: rgba(6, 10, 87, 1);
+            font-family: 'man';
+            color: white;
+            padding: 5px 10px;
+            white-space: nowrap;
+            opacity: 0;
+            transition: opacity 0.3s ease, transform 0.3s ease; /* 添加文字的过渡效果 */
+            z-index: 1;
+            margin-left: 10px; /* 保持文字与图片之间的间距 */
+        }
+
+        .btn3:hover .overlay {
+            font-family: 'man';
+            opacity: 1;
+        }
+
+        .btn3:hover img {
+            transform: translateX(150px) scale(1.8); /* 图片右移20px并放大到1.1倍 */
+            z-index: 4;
+        }
+
+        .btn3:hover .overlay {
+            opacity: 1;
+            font-size: 25px;
+            font-family: 'man';
+            transform: translateY(-50%) scale(1); /* 文字恢复到正常大小 */
+        }
+
+        .btn3:hover{
+            background: rgba(6, 10, 87, 1);
+
+        }
+
+
+
+
+
+
+
+      
+       
+        .right{
+            width: 360px;
+            height: 730px;
+            position: absolute;
+            margin-top: 280px;
+            margin-left: 1550px;
+            opacity: 1;
+            border-radius: 60px;
+            background: rgba(6, 10, 87, 1);
+            box-shadow: 0px 4px 4px  rgba(0, 0, 0, 0.25);
+            font-family: 'man';
+            z-index: 1;
+        }
+        .rightpeople{
+            width: 652px;
+            height: 747px;
+            position: absolute;
+            margin-top: 340px;
+            margin-left: 1350px;
+            z-index: 2;
+        }
+        .my{
+            width: 600px;
+            height: 150px;
+            opacity: 1;
+            position: absolute;
+            border-radius: 100px;
+            background: rgba(6, 10, 87, 1);
+            margin-top: 50px;
+            margin-left: 1300px;
+            display: flex;
+        }
+        .photo{
+            width: 100px;
+            height: 97px;
+            margin-top: 20px;
+            margin-left: 30px;
+        }
+        .write{
+            width: 180px;
+            height: 67px;
+            margin-left: 60px;
+            margin-top: 30px;
+            opacity: 0.9;
+            border-radius: 20px;
+            font-family: 'man';
+            transform: rotate(0.39deg);
+            background: rgba(255, 255, 255, 0.2);
+            box-shadow: 0px 4px 4px  rgba(0, 0, 0, 0.25);
+            padding-top: 5px;
+            color: white;
+            padding-left: 10px;
+        }
+        .gaze3{
+            width: 9px;
+            height: 400px;
+            opacity: 1;
+            border-radius: 30px;
+            background: linear-gradient(237.48deg, rgba(255, 0, 0, 1) 0.5%, rgba(173, 0, 255, 1) 100%);
+            margin-top: 60px;
+            margin-left: 30px;
+        }
+        .leftP{
+            width: 157px;
+            height: 465px;
+            margin-top: 20px;
+            margin-left: 5px;
+            z-index: 1;
+        }
+        .rightP{
+            width: 157px;
+            height: 465px;
+            margin-top: 20px;
+            margin-left: 1px;
+            z-index: 1;
+        }
+        .three{
+            position: absolute;
+            width: 450px;
+            height: 140px;
+            margin-top: 250px;
+            margin-left: 5px;
+            display: flex;
+            z-index: 2;
+        }
+        .three1{
+            width: 144px;
+            height: 137px;
+            margin-top: 0.5px;
+            margin-left: 0px;
+        }
+        .three2{
+            width: 144px;
+            height: 137px;
+            margin-top: 0.5px;
+            margin-left: 8px;
+        }
+        .three3{
+            width: 144px;
+            height: 137px;
+            margin-top: 0.5px;
+            margin-left: 8px;
+        }
+        .hh{
+            width: 78px;
+            height: 250px;
+            margin-top: 26px;
+            margin-left: 55px;
+            
+        }
+        .hh1{
+            width: 78px;
+            height: 75px;
+            margin-top: 0;
+
+        }
+        .hh2{
+            width: 78px;
+            height: 75px;
+            margin-top: 10px;
+            
+        }
+        .hh3{
+            width: 78px;
+            height: 75px;
+            margin-top: 10px;
+            
+        }
+        .picture6{
+            width: 100px;
+            height: 60px;
+            position: absolute;
+            margin-top: 230px;
+            margin-left: 700px;
+            z-index: 5;
+        }
+
+        .picture7{
+            width: 100px;
+            height: 60px;
+            position: absolute;
+            margin-top: 450px;
+            margin-left: 685px;
+            z-index: 5;
+        }
+
+        .picture8{
+            width: 200px;
+            height: 200px;
+            position: absolute;
+            margin-top: 480px;
+            margin-left: 750px;
+            z-index: 1;
+        }
+
+        .picture9{
+            width: 200px;
+            height: 200px;
+            position: absolute;
+            margin-top: 350px;
+            margin-left: 1030px;
+            z-index: 1;
+        }
+        .circle3{
+            width: 35px;
+            height: 35px;
+            position: absolute;
+            z-index: 5;
+            margin-left: 880px;
+            margin-top: 150px;
+        }
+
+        .circle4{
+            width: 35px;
+            height: 35px;
+            position: absolute;
+            z-index: 5;
+            margin-left: 920px;
+            margin-top: 440px;
+        }
+    </style>
+</head>
+<body>
+    <div class="bodyall">
+        <div class="head">
+            <div class="logo"><img src="../img/logo深蓝色更新.png"></div>
+            <div class="circle1"></div>
+            <div class="circle2"><img src="../img/页面4-左图标"></div>
+            <ul class="search">
+                <li class="a1"><a href="#"><img src="../img/首页-首页.png"></a></li>
+                <li class="a2"><a href="#"><img src="../img/首页-情绪分析.png"></a></li>
+                <li class="a3"><a href="#"><img src="../img/首页-情绪调节.png"></a></li>
+                <li class="a4"><a href="#"><img src="../img/首页-情绪日志.png"></a></li>
+                <li class="a5"><a href="#"><img src="../img/首页-更多.png"></a></li>
+                <li class="a6"><a href="#"><img src="../img/首页-设置.png"></a></li>
+                <li class="a7"><a href="#"><img src="../img/首页-退出.png"></a></li>
+            </ul>
+            <div class="picture1">
+                <div class="gaze3"></div>
+                <div class="leftP"><img src="../img/页面4-左人"></div>
+                <div class="rightP"><img src="../img/页面4-右人"></div>
+                <div class="three">
+                    <div class="three1"><img src="../img/页面4-身高"></div>
+                    <div class="three2"><img src="../img/页面4-年龄"></div>
+                    <div class="three3"><img src="../img/页面4-体重"></div>
+                </div>
+                <div class="hh">
+                    <div class="hh1"><img src="../img/页面4-小脑子"></div>
+                    <div class="hh2"><img src="../img/页面4-小肺子"></div>
+                    <div class="hh3"><img src="../img/页面4-小心子"></div>
+                </div>
+            </div>
+            <div class="picture2">
+                <img src="../脑电图.png">
+            </div>
+            <div class="gaze1"></div>
+            <div class="picture4"><img src="../img/功能页-曲线.png" class="ac"></div>
+            <div class="picture3">
+
+            </div>
+            <div class="gaze2"></div>
+            <div class="btn1">
+                <a href="情绪分析导图.html">
+                    <img src="../img/首页-功能1" alt="Button Image">
+                    <div class="overlay">情绪分析</div>
+                </a>        
+            </div>
+            <div class="btn2">
+                <a href="情绪日志.html">    
+                    <img src="../img/首页-功能2">
+                    <div class="overlay">情绪日志</div>
+                </a>
+            </div>
+            <div class="btn3">
+                <a href="情绪调节总页.html">
+                    <img src="../img/首页-功能3">
+                    <div class="overlay">情绪调节</div>
+                </a>
+            </div>
+            <div class="right"></div>
+            <div class="my">
+                <div class="photo"><img src="../img/页面4-大头照"></div>
+                <div class="write"><br>吴先生<br>(留下你的签名)</div>
+                
+            </div>
+            <div class="rightpeople"><img src="../img/页面4-右下角"></div>
+        </div>
+        <div class="picture6"><img src="../img/功能页-脑子左上方.png"></div>
+        <div class="picture7"><img src="../img/功能页-脑子左下方.png"></div>
+        <div class="picture8"><img src="../img/功能页-脑子下圈.png"></div>
+        <div class="picture9"><img src="../img/功能页-脑子右下方.png"></div>
+        <div class="circle3"><img src="../img/功能页-点.png"> </div>
+        <div class="circle4"><img src="../img/功能页-点.png"> </div>
+    </div>
+</body>
+</html>

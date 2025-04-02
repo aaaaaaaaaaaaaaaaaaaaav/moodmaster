@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @font-face {
+            font-family: 'man';
+            src: url(../img/HuXiaoBoNanShenTi/HuXiaoBoNanShenTi-2.otf);
+        }
+        .bodyall{
+            width: 1800px;
+            height: 1080px;
+            margin: 0;
+            padding: 0;
+            position: relative;
+            z-index: 1;
+            overflow: hidden;
+            background: linear-gradient(180deg, rgba(27, 24, 109, 1) 0%, rgba(3, 48, 164, 1) 100%);
+        }
+        .logo{
+            width: 160px;
+            height: 60px;
+            margin-top: 20px;
+            margin-left: 20px;
+            position: absolute;
+        }
+        #rocket{
+            width: 1000px;
+            height: 800px;
+            margin-top: 50px;
+            margin-left: 0;
+            position: absolute;
+        }
+
+        .huo img {
+            width: 100%;
+            transition: transform 5s ease, opacity 5s ease;
+        }
+
+
+        .huo.animate1 img {
+            transform: scale(0.3) translate(3000px, -2000px); /* Adjust scale and translation as needed */
+            opacity: 0;
+        }
+
+        .huo.animate5 img {
+            transform: scale(1.5) translate(500px, -500px); /* Adjust scale and translation as needed */
+            opacity: 0;
+        }
+
+
+        .cloud1{
+            width: 560px;
+            height: 400px;
+            margin-left: 90px;
+            margin-top: 10px;
+            position: absolute;
+        }
+
+        .cloud1 img {
+            width: 100%;
+            transition: transform 5s ease, opacity 5s ease;
+        }
+
+
+        .cloud1.animate2 img {
+            transform: scale(2.0) translate(-100px, 800px); /* Adjust scale and translation as needed */
+            opacity: 0;
+        }
+
+        .cloud1.animate6 img {
+            transform: scale(1.0) translate(0, -500px); /* Adjust scale and translation as needed */
+            opacity: 0;
+        }
+
+
+        .mid1{
+            width: 425px;
+            height: 400px;
+            margin-top: 240px;
+            margin-left: 470px;
+            position: absolute;
+            z-index: 5;
+        }
+        .mid2{
+            height: 300px;
+            width: 520px;
+            margin-top: 270px;
+            margin-left: 840px;
+            position: absolute;
+            z-index: 1;
+        }
+        .mid3{
+            width: 325px;
+            height: 260px;
+            margin-top: 270px;
+            margin-left: 1370px;
+            position: absolute;
+
+            opacity: 1;
+           
+            text-shadow: 0px 10px 10px  rgba(0, 0, 0, 0.25);
+            /** 文本1 */
+            font-family: 'man';
+            font-size: 250px;
+            font-weight: 400;
+            letter-spacing: 0px;
+            line-height: 292.97px;
+            color: rgba(248, 255, 162, 1);
+            text-align: left;
+            vertical-align: top;
+        }
+
+        .mid3{
+            width: 100%;
+            transition: transform 5s ease, opacity 5s ease;
+        }
+
+
+        .mid3.move-up {
+            transform: scale(1.0) translate(200px, 600px);
+            opacity: 0;
+        }
+
+        .mid3.move-up1 {
+            transform: scale(1.0) translate(500px, 500px);
+            opacity: 0;
+        }
+
+
+
+        .write{
+            width: 720px;
+            height: 420px;
+            position: absolute;
+            margin-top: 620px;
+            margin-left: 480px;
+            z-index: 3;
+            opacity: 1;
+            
+            border-radius: 50px;
+            background: rgba(29, 33, 35, 0.05);
+
+            border: 1px solid rgba(255, 255, 255, 0.1);
+
+            backdrop-filter: blur(24px);
+
+
+            /** 文本1 */
+            padding-left: 10px;
+            font-family: 'man';
+            font-size: 20px;
+            font-weight: 400;
+            letter-spacing: 1px;
+            line-height: 30px;
+            color: rgba(255, 255, 255, 1);
+            /* text-align: center; */
+            
+        }
+        .right{
+            width: 880px;
+            height: 620px;
+            margin-top: 600px;
+            margin-left: 1050px;
+            position: absolute;
+            z-index: 1;
+        }
+
+        .right img {
+            width: 100%;
+            transition: transform 5s ease, opacity 5s ease;
+        }
+
+
+        .right.animate3 img {
+            transform: scale(1.0) translate(500px, 500px); /* Adjust scale and translation as needed */
+            opacity: 0;
+        }
+
+        .right.animate4 img {
+            transform: scale(0.7) translate(0, -1200px); /* Adjust scale and translation as needed */
+            opacity: 0;
+        }
+
+
+        .up{
+            width: 60px;
+            height: 60px;
+            position: absolute;
+            margin-top: 430px;
+            margin-left: 1620px;
+            z-index: 5;
+        }
+        .down{
+            width: 60px;
+            height: 60px;
+            position: absolute;
+            margin-top: 650px;
+            margin-left: 1620px;
+            z-index: 5;
+        }
+        .header4{
+            width: 500px;
+            height: 84px;
+            font-family: 'man';
+            margin-top: 120px;
+            margin-left: 700px;
+            position: absolute;
+            z-index: 8;
+            font-size: 80px;
+            color: white;
+        }
+        .back8{
+            width: 1000px;
+            height: 500px;
+            position: absolute;
+            z-index: 2;
+            margin-top: -50px;
+            margin-left: 200px;
+        }
+    </style>
+</head>
+<body>
+    <div class="bodyall"> 
+        <div class="logo"><img src="../img/logo浅蓝色更新.png"></div>
+        <div class="huo" id="rocket">
+            <img src="../img/情绪分析3-火箭新.png">
+        </div>
+        <div class="cloud1" id="cloud12">
+            <img src="../img/情绪分析3-左上云新.png">
+        </div>
+        <div class="mid1"><img src="../img/情绪分析3-中间图新.png"></div>
+        <!-- <div class="mid2"><img src="../img/情绪分析3-中2"></div> -->
+        
+        <div class="mid3" id="write1">
+            01
+        </div>
+        <div class="header4">情绪报告</div>
+        
+        <div class="write"><br>根据今日的脑电图EEG分析，主要情绪为：<br>
+            积极（42%），中性（30%），消极（28%）<br>
+            情绪分析显示，快乐情绪占据了绝大部分。这种快乐感源自多个方面：可能是来自于与亲人朋友的交流，或是成功完成的工作任务，甚至是简单的日常快乐时刻，比如一个笑话或一杯热咖啡。这种情绪不仅仅是一种心理感受，它还对身体健康有着积极的影响，持续的快乐和正面情绪可以降低患抑郁症、焦虑症和其他心理健康问题的风险，有助于提升免疫系统功能和生活质量。<br>
+            中性情绪，即较为平静的情绪状态。适当的中性情绪能保持心态平和，利于理性思考和决策。有利于提高情绪的调节能力，以便更好地应对挑战。<br>
+            消极情绪，是人们在面对压力、挫折或困扰时常有的反应，可能表现为焦虑、抑郁或愤怒。长期沉浸于这些情绪中，会对身心健康产生危害，影响人际关系和生活质量。调整负面情绪显得尤为重要。通过积极的情绪管理和心理调适来改善负面情绪尤为重要。</div>
+        <div class="right" id="right2">
+            <img src="../img/情绪分析3-右下云新.png">
+        </div>
+        <div class="up">
+            <a href="情绪分析4图.html" id="transition-link">
+                <img src="../img/上.png">
+            </a>
+        </div>
+        <div class="down">
+            <a href="情绪分析2图.html" id="transition-link2">
+                <img src="../img/下.png">
+            </a>
+        </div>
+        <div class="back8">
+            <img src="../img/情绪分析3-线条.png">
+        </div>
+    </div>
+</body>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+            var link = document.getElementById('transition-link');
+            var header = document.getElementById('write1');
+            
+            link.addEventListener('click', function(event) {
+                event.preventDefault(); // 阻止默认的链接跳转
+                
+                // 给 header 添加一个类来启动动画
+                header.classList.add('move-up');
+
+                // 使用 setTimeout 来确保动画完成后再跳转页面
+                setTimeout(function() {
+                    window.location.href = link.href; // 跳转到新页面
+                }, 1500); // 与 CSS 动画持续时间相匹配
+            });
+        });
+
+        document.getElementById('transition-link').addEventListener('click', function(e) {
+            e.preventDefault(); // 阻止默认的点击行为
+            const rocket = document.getElementById('rocket');
+            rocket.classList.add('animate1');
+            setTimeout(() => {
+                window.location.href = e.target.parentElement.href;
+            }, 1500); // 动画持续时间
+        });
+
+        document.getElementById('transition-link').addEventListener('click', function(e) {
+            e.preventDefault(); // 阻止默认的点击行为
+            const rocket = document.getElementById('cloud12');
+            rocket.classList.add('animate2');
+            setTimeout(() => {
+                window.location.href = e.target.parentElement.href;
+            }, 1500); // 动画持续时间
+        });
+
+        document.getElementById('transition-link').addEventListener('click', function(e) {
+            e.preventDefault(); // 阻止默认的点击行为
+            const rocket = document.getElementById('right2');
+            rocket.classList.add('animate3');
+            setTimeout(() => {
+                window.location.href = e.target.parentElement.href;
+            }, 1500); // 动画持续时间
+        });
+
+
+
+
+        document.addEventListener('DOMContentLoaded', function() {
+            var link = document.getElementById('transition-link2');
+            var header = document.getElementById('write1');
+            
+            link.addEventListener('click', function(event) {
+                event.preventDefault(); // 阻止默认的链接跳转
+                
+                // 给 header 添加一个类来启动动画
+                header.classList.add('move-up1');
+
+                // 使用 setTimeout 来确保动画完成后再跳转页面
+                setTimeout(function() {
+                    window.location.href = link.href; // 跳转到新页面
+                }, 1500); // 与 CSS 动画持续时间相匹配
+            });
+        });
+
+
+
+        document.getElementById('transition-link2').addEventListener('click', function(e) {
+            e.preventDefault(); // 阻止默认的点击行为
+            const rocket = document.getElementById('right2');
+            rocket.classList.add('animate4');
+            setTimeout(() => {
+                window.location.href = e.target.parentElement.href;
+            }, 1500); // 动画持续时间
+        });
+
+
+        document.getElementById('transition-link2').addEventListener('click', function(e) {
+            e.preventDefault(); // 阻止默认的点击行为
+            const rocket = document.getElementById('rocket');
+            rocket.classList.add('animate5');
+            setTimeout(() => {
+                window.location.href = e.target.parentElement.href;
+            }, 1500); // 动画持续时间
+        });
+
+        document.getElementById('transition-link2').addEventListener('click', function(e) {
+            e.preventDefault(); // 阻止默认的点击行为
+            const rocket = document.getElementById('cloud12');
+            rocket.classList.add('animate6');
+            setTimeout(() => {
+                window.location.href = e.target.parentElement.href;
+            }, 1500); // 动画持续时间
+        });
+</script>
+</html>

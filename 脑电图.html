@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #app {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          height: 100vh;
+          background-color: #282c34;
+        }
+        canvas {
+          border: 1px solid white;
+        }
+        </style>
+</head>
+<body>
+    
+</body>
+<template>
+    <div id="app">
+      <canvas ref="canvas" width="800" height="400"></canvas>
+    </div>
+  </template>
+<script>
+    export default {
+      data() {
+        return {
+          context: null,
+          dataPoints: [],
+          maxPoints: 100,
+          frequency: 0.05, // 控制波动频率
+        };
+      },
+      mounted() {
+        this.context = this.$refs.canvas.getContext('2d');
+        this.startDrawing();
+      },
+      methods: {
+        startDrawing() {
+          const updateData = () => {
+            // 添加新的数据点
+            const newPoint = Math.sin(Date.now() * this.frequency) * 50 + 200; // 模拟的 EEG 数据
+            this.dataPoints.push(newPoint);
+            
+            // 保持数据点数量
+            if (this.dataPoints.length > this.maxPoints) {
+              this.dataPoints.shift();
+            }
+    
+            this.draw();
+            requestAnimationFrame(updateData); // 循环更新
+          };
+          updateData();
+        },
+        draw() {
+          const { width, height } = this.$refs.canvas;
+          this.context.clearRect(0, 0, width, height); // 清空画布
+    
+          // 绘制 EEG 曲线
+          this.context.beginPath();
+          this.context.moveTo(0, this.dataPoints[0]);
+          for (let i = 1; i < this.dataPoints.length; i++) {
+            const x = (i / this.maxPoints) * width; // X 坐标
+            const y = this.dataPoints[i]; // Y 坐标
+            this.context.lineTo(x, y);
+          }
+    
+          this.context.strokeStyle = 'green'; // 曲线颜色
+          this.context.lineWidth = 2; // 曲线宽度
+          this.context.stroke();
+        },
+      },
+    };
+    </script>
+</html>

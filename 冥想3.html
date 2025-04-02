@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @font-face {
+            font-family: 'man';
+            src: url(../img/HuXiaoBoNanShenTi/HuXiaoBoNanShenTi-2.otf);
+        }
+        
+        .bodyall{
+            width: 1800px;
+            height: 1080px;
+            margin: 0;
+            padding: 0;
+            position: relative;
+            z-index: 1;
+            overflow: hidden;
+           
+        }
+        .logo{
+            width: 160px;
+            height: 60px;
+            margin-top: 20px;
+            margin-left: 20px;
+            position: absolute;
+        }
+        .flower{
+            width: 650px;
+            height: 650px;
+            margin-top: 700px;
+            margin-left: -200px;
+            position: absolute;
+        }
+
+
+        .return{
+            width: 153px;
+            height: 80px;
+            opacity: 1;
+            border-radius: 30px;
+            background: rgba(255, 255, 255, 1);
+            box-shadow: 5px 4px 10px 5px rgba(0, 0, 0, 0.25);
+            margin-top: 950px;
+            margin-left: 10px;
+            position: absolute;
+            
+            /** 文本1 */
+            font-family: 'man';
+            font-size: 25px;
+            font-weight: 400;
+            letter-spacing: 0px;
+            line-height: 84px;
+            color: rgba(27, 24, 109, 1);
+            text-align: center;
+        }
+        .return a{
+            text-decoration: none;
+        }
+        .return img{
+            padding-top: -5px;
+            padding-left: -30px;
+            vertical-align: middle;
+        }
+
+        .peopleback{
+            width: 480px;
+            height: 500px;
+            position: absolute;
+            margin-top: 100px;
+            margin-left: 50px;
+            z-index: 1;
+        }
+        .people{
+            width: 370px;
+            height: 370px;
+            margin-top: 160px;
+            margin-left: 110px;
+            position: absolute;
+            z-index: 1;
+        }
+        .video{
+            width: 707px;
+            height: 400px;
+            margin-top: 570px;
+            margin-left: 1050px;
+            position: absolute;
+            z-index: 5;
+        }
+        .videoback{
+            width: 700px;
+            height: 500px;
+            margin-top: -250px;
+            margin-left: 800px;
+            position: absolute;
+            z-index: 1;
+        }
+        .write1{
+            width: 340px;
+            height: 200px;
+            margin-top: 330px;
+            margin-left: 550px;
+            position: absolute;
+            z-index: 4;
+            font-family: 'man';
+            border-radius: 20px;
+            background: rgba(255, 255, 255, 1);
+            box-shadow: 0px 4px 4px  rgba(0, 0, 0, 0.25);
+            padding-top: 30px;
+            padding-left: 30px;
+            padding-right: 30px;
+            font-size: 8px;
+            font-weight: 400;
+            letter-spacing: 0px;
+            line-height: 13px;
+            color: rgba(0, 0, 0, 1);
+            text-align: left;
+            vertical-align: top;
+        }
+        .strong{
+            font-size: 20px;
+            font-weight: 400;
+            letter-spacing: 0px;
+            line-height: 28.96px;
+            color: rgba(0, 0, 0, 1);
+            text-align: left;
+            vertical-align: top;
+        }
+        .write2{
+            width: 380px;
+            height: 200px;
+            position: absolute;
+            margin-top: 670px;
+            margin-left: 720px;
+            font-family: 'man';
+            opacity: 1;
+            border-radius: 20px;
+            background: rgba(255, 255, 255, 1);
+            box-shadow: 0px 4px 4px  rgba(0, 0, 0, 0.25);
+            z-index: 6;
+
+            padding-top: 30px;
+            padding-left: 30px;
+            padding-right: 30px;
+
+            font-size: 8px;
+            font-weight: 400;
+            letter-spacing: 0px;
+            line-height: 13px;
+            color: rgba(0, 0, 0, 1);
+            text-align: left;
+            vertical-align: top;
+        }
+        .circle1{
+            width: 70px;
+            height: 70px;
+            position: absolute;
+            margin-top: 520px;
+            margin-left: 920px;
+            z-index: 5;
+        }
+       
+
+
+        .circle2{
+            width: 160px;
+            height: 160px;
+            position: absolute;
+            margin-top: 840px;
+            margin-left: 660px;
+            z-index: 7;
+        }
+
+        
+        .circle3{
+            width: 70px;
+            height: 70px;
+            position: absolute;
+            margin-top: 850px;
+            margin-left: 710px;
+            z-index: 6;
+        }
+        .back{
+            width: 1200px;
+            height: 800px;
+            position: absolute;
+            z-index: 0;
+            margin-top: -200px;
+            margin-left: -1500px;
+        }
+
+        .back img {
+           
+            transition: transform 2s ease, opacity 2s ease;
+        }
+
+
+        .back.animate1 img {
+            transform: scale(1.0) translate(0, -600px); /* Adjust scale and translation as needed */
+            opacity: 0;
+        }
+        .picture1{
+            width: 250px;
+            height: 220px;
+            margin-top: 390px;
+            margin-left: 1320px;
+            position: absolute;
+            z-index: 6;
+        }
+
+        .picture1 img {
+            transition: transform 0.3s ease, opacity 0.3s ease; /* 添加过渡效果 */
+        }
+
+        .picture1:hover img {
+            transform: translate(10px, -10px) scale(1.1); /* 移动并放大 */
+            opacity: 0.8; /* 改变透明度 */
+        }
+        .picture2{
+            width: 200px;
+            height: 225px;
+            position: absolute;
+            margin-top: 240px;
+            margin-left: 1600px;
+            z-index: 6;    
+        }
+
+        #videoPlayer {
+            display: none; /* 初始隐藏视频 */
+            width: 100%; /* 可根据需要调整 */
+            max-width: 600px;
+        }
+    </style>
+</head>
+<body>
+    <div class="bodyall">
+        <div class="logo"><img src="../img/logo深蓝色更新.png"></div>
+        <div class="flower"><img src="../img/冥想3-花"></div>
+        <div class="peopleback"><img src="../img/冥想3-人物背景"></div>
+        <div class="people"><img src="../img/冥想3-人物"></div>
+        <div class="video"><img src="../img/冥想3-视频"></div>
+        <div class="videoback"><img src="../img/冥想3-背景"></div>
+        <div class="write1"><span class="strong">冥想音乐</span><br>首先，它能够创造一种安静和平的环境，为冥想者提供一个专注和放松的空间。通过深沉的音调和节奏，冥想音乐有助于降低心率和呼吸，帮助人们更快速地进入冥想状态，提升冥想的效果和深度。<br>  其次，冥想音乐往往结合了自然声音或特定的声波频率，如白噪音、波形声音等，这些声音对大脑产生积极的影响。它们有助于减少外界干扰和杂念，使冥想者更容易集中注意力，提升内心的平静感和专注力。 <br> 另外，冥想音乐还能够调节大脑的α波节律，这种波段通常与放松、创造力和深度思考相关联。通过听音乐，特别是那些经过特别设计的冥想音乐，人们可以促进自我意识和内省，加深对自身内心和精神状态的理解，从而增强心理健康和情绪平衡。  </div>
+        <div class="write2"><span class="strong">冥想视频教学</span> <br><br>冥想视频教学的持续性和可重复性使得学习者能够在不断实践中逐步提升冥想技能和深度。通过反复观看和实践，学习者可以建立起稳定的冥想习惯，从而在减轻压力、增强注意力和提升整健康方面获得长期的益处。<br><br> 冥想视频教学通过其灵活性、专业指导、多感官体验和可持续性，为学习者提供了一个有效且深入的冥想学习平台，帮助他们在现代快节奏的生活中找到内心平静和身心健康的均衡点</div>
+        <div class="circle1">
+            <a href="冥想1.html" id="transition-link">
+                <img src="../img/冥想3-圆.png">
+                
+            </a>
+        </div>
+        
+        <div class="circle2">
+            <a href="javascript:void(0);" onclick="toggleVideo()">
+                <img src="../img/冥想3-环">
+            </a>
+        </div>
+        <div class="icon2"><img src="../img/冥想3-左箭头.png"></div>
+        <div class="circle3"><img src="../img/冥想3-圆.png"></div>
+        <div class="back" id="back1"><img src="../img/冥想3-线条"></div>
+        <div class="picture1"><img src="../img/冥想3-茶杯"></div>
+        <div class="picture2"><img src="../img/冥想3-图标"></div>
+        <div class="return">
+            <a href="冥想.html">
+                <img src="../img/返回键.png">
+                返回
+            </a>
+        </div>
+        <video id="videoPlayer" controls style="position: absolute; top: 0; left: 1150px; width: 1000px;  height: 400px; display: none; z-index: 10;">
+            <source src="../冥想视频.mp4" type="video/mp4"> <!-- 替换为你的冥想视频文件 -->
+            你的浏览器不支持视频播放。
+        </video>
+        
+    </div>
+</body>
+<script>
+        document.getElementById('transition-link').addEventListener('click', function(e) {
+            e.preventDefault(); // 阻止默认的点击行为
+            const rocket = document.getElementById('back1');
+            rocket.classList.add('animate1');
+            setTimeout(() => {
+                window.location.href = e.target.parentElement.href;
+            }, 1000); // 动画持续时间
+        });
+
+        var videoPlayer = document.getElementById("videoPlayer");
+
+        function toggleVideo() {
+            if (videoPlayer.style.display === "none") {
+                videoPlayer.style.display = "block"; // 显示视频
+                videoPlayer.play(); // 播放视频
+            } else {
+                videoPlayer.style.display = "none"; // 隐藏视频
+                videoPlayer.pause(); // 暂停视频
+            }
+        }
+</script>
+</html>

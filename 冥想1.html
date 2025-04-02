@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @font-face {
+            font-family: 'man';
+            src: url(../img/HuXiaoBoNanShenTi/HuXiaoBoNanShenTi-2.otf);
+        }
+        
+        .bodyall{
+            width: 1800px;
+            height: 1080px;
+            margin: 0;
+            padding: 0;
+            position: relative;
+            z-index: 1;
+            overflow: hidden;
+            background: rgba(238, 250, 251, 1);
+            ;
+        }
+        .logo{
+            width: 160px;
+            height: 60px;
+            margin-top: 20px;
+            margin-left: 20px;
+            position: absolute;
+            z-index: 5;
+        }
+        .main{
+            width: 1400px;
+            height: 790px;
+            background: rgba(255, 255, 255, 1);
+            box-shadow: 0px 10px 50px  rgba(0, 0, 0, 0.25);
+            margin-top: 100px;
+            margin-left: 250px;
+            position: absolute;
+            z-index: 2;
+        }
+        .back1{
+            width: 1300px;
+            height: 750px;
+            position: absolute;
+            z-index: 2;
+            margin-top: 120px;
+            margin-left: 340px;
+
+        }
+        .picture{
+            width: 600px;
+            height: 300px;
+            position: absolute;
+            margin-top: 160px;
+            margin-left: 300px;
+            z-index: 3;
+        }
+        .quality{
+            width: 410px;
+            height: 250px;
+            margin-top: 460px;
+            margin-left: 350px;
+            position: absolute;
+            z-index: 3;
+        }
+        .main2{
+            width: 245px;
+            height: 505px;
+            margin-top: 470px;
+            margin-left: 110px;
+            position: absolute;
+            z-index: 3;
+
+            border-radius: 50px;
+            background: rgba(29, 33, 35, 0.05);
+
+            border: 1px solid rgba(255, 255, 255, 0.1);
+
+            box-shadow: 0px 10px 4px  rgba(0, 0, 0, 0.25);
+            backdrop-filter: blur(24px);
+        }
+        .recommend{
+            width: 150px;
+            height: 30px;
+            padding-top: 38px;
+            padding-left: 34px;
+            font-family: 'man';
+            font-size: 30px;
+            font-weight: 400;
+            letter-spacing: 1px;
+            line-height: 43.44px;
+            color: rgba(255, 255, 255, 1);
+            text-align: left;
+            vertical-align: top;
+        }
+        .re1{
+            width: 103px;
+            height: 103px;
+            padding-top: 46px;
+            padding-left: 120px;
+
+        }
+        .re2{
+            width: 103px;
+            height: 103px;
+            padding-top: 20px;
+            padding-left: 120px;
+
+        }
+        .re3{
+            width: 103px;
+            height: 103px;
+            padding-top: 20px;
+            padding-left: 120px;
+            
+        }
+        .re4{
+            width: 80px;
+            height: 250px;
+            position: absolute;
+            z-index: 4;
+            margin-top: 630px;
+            margin-left: 120px;            
+        }
+        .musicback{
+            width: 670px;
+            height: 660px;
+            margin-top: 10px;
+            margin-left: 1030px;
+            z-index: 3;
+            position: absolute;            
+        }
+
+        .return{
+            width: 153px;
+            height: 80px;
+            opacity: 1;
+            border-radius: 30px;
+            background: rgba(255, 255, 255, 1);
+            box-shadow: 5px 4px 10px 5px rgba(0, 0, 0, 0.25);
+            margin-top: 990px;
+            margin-left: 10px;
+            position: absolute;
+            
+            /** 文本1 */
+            font-family: 'man';
+            font-size: 25px;
+            font-weight: 400;
+            letter-spacing: 0px;
+            line-height: 84px;
+            color: rgba(27, 24, 109, 1);
+            text-align: center;
+        }
+        .return a{
+            text-decoration: none;
+        }
+        .return img{
+            padding-top: -5px;
+            padding-left: -30px;
+            vertical-align: middle;
+        }
+        .music{
+            width: 520px;
+            height: 510px;
+            position: absolute;
+            z-index: 4;
+            margin-top: 90px;
+            margin-left: 1110px;
+            transition: transform 1s;
+        }
+
+        .rotate{
+            transition: transform 20s linear;
+        }
+
+        .rotating {
+            transform: rotate(360deg); /* 旋转360度 */
+        }
+
+
+        .write1{
+            width: 200px;
+            height: 30px;
+            margin-top: 800px;
+            margin-left: 1300px;
+            position: absolute;
+            z-index: 4;
+            font-family: 'man';
+            font-size: 50px;
+            font-weight: 400;
+            letter-spacing: 0px;
+            line-height: 33px;
+            color: rgba(27, 24, 109, 1);
+            text-align: center;
+            vertical-align: top;
+        }
+       
+        .write2{
+            width: 210px;
+            height: 30px;
+            position: absolute;
+            margin-top: 850px;
+            margin-left: 1300px;
+            z-index: 8;
+            font-family: 'man';
+            font-size: 20px;
+            font-weight: 400;
+            letter-spacing: 0px;
+            line-height: 33px;
+            color: rgba(27, 24, 109, 1);
+            text-align: center;
+            vertical-align: top;
+        }
+        .main3{
+            width: 58px;
+            height: 420px;
+            margin-left: 1000px;
+            margin-top: 270px;
+            position: absolute;
+            z-index: 4;
+            border-radius: 28px;
+            transform: rotate(0.08deg);
+            background: linear-gradient(90deg, rgba(176, 213, 234, 1) 0%, rgba(198, 225, 240, 1) 100%);
+
+            border: 3px solid rgba(254, 254, 254, 0.51);
+
+            box-shadow: 6px 4px 21px  rgba(126, 177, 204, 1), -10px 18px 64px  rgba(255, 255, 255, 0.25), 0px 0px 12px  rgba(255, 255, 255, 1), 13px -14px 19px  rgba(157, 201, 228, 1), -19px -27px 39px  rgba(221, 238, 246, 1);
+        }
+        .circle{
+            width: 35px;
+            height: 35px;
+            /* padding-top: 30px;
+            padding-left: 15px; */
+            border: none;
+            margin-top: 70px;
+            margin-left: 13px;
+            background: linear-gradient(90deg, rgba(176, 213, 234, 1) 0%, rgba(198, 225, 240, 1) 100%);
+        }
+        .add{
+            width: 35px;
+            height: 35px;
+            /* padding-top: 30px;
+            padding-left: 15px; */
+            z-index: 8;
+            position: absolute;
+            border: none;
+            margin-top: 420px;
+            margin-left: 1015px;
+            background: linear-gradient(90deg, rgba(176, 213, 234, 1) 0%, rgba(198, 225, 240, 1) 100%);
+        }
+        .end{
+            width: 35px;
+            height: 35px;
+            z-index: 10;
+            position: absolute;
+            /* padding-top: 30px;
+            padding-left: 15px; */
+            border: none;
+            margin-top: 490px;
+            margin-left: 1020px;
+            background: linear-gradient(90deg, rgba(176, 213, 234, 1) 0%, rgba(198, 225, 240, 1) 100%);
+        }
+        .front{
+            width: 35px;
+            height: 35px;
+            position: absolute;
+            z-index: 5;
+            margin-top: 560px;
+            margin-left: 1015px;
+            /* padding-top: 30px;
+            padding-left: 15px; */
+            border: none;
+          
+            background: linear-gradient(90deg, rgba(176, 213, 234, 1) 0%, rgba(198, 225, 240, 1) 100%);
+        }
+        .ing{
+            width: 12px;
+            height: 425px;
+            position: absolute;
+            margin-top: 250px;
+            margin-left: 880px;
+            z-index: 4;
+        }
+        .background{
+            width: 1200px;
+            height: 1000px;
+            position: absolute;
+            z-index: 0;
+            margin-top: -500px;
+            margin-left: -400px;
+        }
+        .flower{
+            width: 650px;
+            height: 650px;
+            position: absolute;
+            z-index: 1;
+            margin-top: 80px;
+            margin-left: -50px;
+        }
+        .bo{
+            width: 500px;
+            height: 100px;
+            z-index: 8;
+            position: absolute;
+            margin-top: 700px;
+            margin-left: 400px;
+        }
+        .love{
+            width: 60px;
+            height: 60px;
+            position: absolute;
+            z-index: 8;
+            margin-top: 645px;
+            margin-left: 1012px;
+        }
+    </style>
+</head>
+<body>
+    <div class="bodyall">
+        <div class="logo"><img src="../img/logo深蓝色更新.png"></div>
+        <div class="main"></div>
+        <div class="back1"><img src="../img/冥想一-背景字母"></div>
+        <div class="picture"><img src="../img/冥想1-更新波浪图.png"></div>
+        <div class="quality"><img src="../img/冥想1-更新质量图.png"></div>
+        <div class="main2">
+            <div class="recommend">为您推荐</div>
+            <div class="re1"><img src="../img/冥想1-推荐1"></div>
+            <div class="re2"><img src="../img/冥想一-推荐2"></div>
+            <div class="re3"><img src="../img/冥想一-推荐右3"></div>
+           
+        </div>
+        <div class="re4"><img src="../img/冥想一-推荐左"></div>
+        <div class="musicback"><img src="../img/冥想一-图片背景"></div>
+        <div class="music">
+            <img src="../img/冥想一-图片" id="musicImage" alt="旋转图片" class="rotate">
+        </div>
+        <div class="write1">冥想音乐</div>
+        <div class="write2">正在播放  playing now</div>
+        <div class="main3">
+            <button class="circle"><img src="../img/冥想1-播放1"></button>
+            
+            
+           
+        </div>
+        <button class="end" onclick="toggleMusic()">
+            <a href="#" style="color:white">  
+            <img src="../img/冥想一-播放3">
+            </a>
+        </button>
+        <button class="front"><img src="../img/冥想一-播放4"></button>
+        <div class="love"><img src="../img/冥想1-love.png"></div>
+        <button class="add">
+            <a href="冥想2.html">
+                <img src="../img/冥想1-播放2">
+            </a>
+        </button>
+        <div class="ing"><img src="../img/冥想一-竖线"></div>
+        <div class="background"><img src="../img/冥想1-线条"></div>
+        <div class="flower"><img src="../img/冥想一-花"></div>
+        <div class="bo"><img src="../img/冥想1-波.png"></div>
+        <div class="return">
+            <a href="冥想3.html">
+                <img src="../img/返回键.png">
+                返回
+            </a>
+        </div>
+        <audio id="audioPlayer">
+            <source src="../冥想音乐.mp4" type="audio/mp4"> <!-- 替换为你的 MP4 音频文件 -->
+            
+        </audio>
+    </div>
+    <script>
+        var audioPlayer = document.getElementById("audioPlayer");
+        var musicImage = document.getElementById("musicImage");
+        var rotationInterval;
+
+        function rotateImage() {
+            musicImage.style.transform = `rotate(${(parseFloat(getComputedStyle(musicImage).transform.split(',')[1]) || 0) + 1}deg)`;
+        }
+
+        function startContinuousRotation() {
+            rotationInterval = setInterval(rotateImage, 1); // 每20毫秒旋转1度
+        }
+
+        function toggleMusic() {
+            if (audioPlayer.paused) {
+                audioPlayer.play(); // 播放音频
+                startContinuousRotation(); // 开始旋转
+            } else {
+                audioPlayer.pause(); // 暂停音频
+                clearInterval(rotationInterval); // 停止旋转
+            }
+        }
+    </script>
+</body>
+</html>

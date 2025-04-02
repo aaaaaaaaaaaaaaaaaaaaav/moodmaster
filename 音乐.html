@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @font-face {
+            font-family: 'man';
+            src: url(../img/HuXiaoBoNanShenTi/HuXiaoBoNanShenTi-2.otf);
+        }
+
+        @font-face {
+            font-family: 'man1';
+            src: url(../BerkshireSwash-Regular.ttf);
+        }
+
+        @font-face {
+            font-family: 'man2';
+            src: url(../Caveat/Caveat-Regular.ttf);
+        }
+        
+        .bodyall{
+            width: 1800px;
+            height: 1080px;
+            margin: 0;
+            padding: 0;
+            position: relative;
+            z-index: 1;
+            overflow: hidden;
+        }
+        .logo{
+            position: absolute;
+            width: 156px;
+            height: 60px;
+            margin-top: 32px;
+            margin-left: 20px;
+        }
+        .header{
+            position: absolute;
+            width: 525px;
+            height: 132px;
+            margin-top: 290px;
+            margin-left: 95px;
+            opacity: 1;
+            
+            /** 文本1 */
+            font-family: 'man';
+            font-size: 200px;
+            font-weight: 400;
+            letter-spacing: 0px;
+            line-height: 64px;
+            color: rgba(27, 24, 109, 1);
+            text-align: left;
+        }
+        .rewind{
+            position: absolute;
+            width: 315px;
+            height: 128px;
+            margin-top: 430px;
+            margin-left: 104px;
+            opacity: 1;
+            /** 文本1 */
+            font-family: 'man';
+            font-size: 48px;
+            font-weight: 400;
+            letter-spacing: 0px;
+            line-height: 48px;
+            color: rgba(28, 30, 82, 1);
+            /** 文本2 */
+            font-family: 'man';
+            font-size: 48px;
+            font-weight: 400;
+        }
+        .music{
+            position: absolute;
+            width: 120px;
+            height: 64px;
+            margin-top: 420px;
+            margin-left: 440px;
+            opacity: 1;
+            /** 文本1 */
+            font-family: 'man2';
+            font-size: 64px;
+            font-weight: 700;
+            letter-spacing: 0px;
+            line-height: 64px;
+            color: rgba(253, 128, 97, 1);
+            text-align: left;
+        }
+        .start{
+            width: 162px;
+            height: 40px;
+            position: absolute;
+            margin-top: 540px;
+            margin-left: 100px;
+            opacity: 1;
+            
+            /** 文本1 */
+            font-family: 'man1';
+            font-size: 16px;
+            font-weight: 400;
+            letter-spacing: 0px;
+            line-height: 40px;
+            color: rgba(255, 255, 255, 1);
+            text-align: center;
+            border-radius: 50px;
+            background: rgba(253, 128, 97, 1);
+            box-shadow: 0px 4px 4px ;
+        }
+
+        .start a{
+            text-decoration: none;
+            color: white;
+        }
+        .back1{
+            width: 1200px;
+            height: 1080px;
+            margin-left: 620px;
+            position: absolute;
+            z-index: 1;
+        }
+        .back2{
+            width: 868px;
+            height: 900px;
+            margin-top: 173px;
+            margin-left: 740px;
+            position: absolute;
+            z-index: 3;
+        }
+        .mai{
+            width: 346px;
+            height: 400px;
+            margin-top: 600px;
+            margin-left: 460px;
+            position: absolute;
+            z-index: 5;
+        }
+
+        .mai img {
+            transition: transform 0.3s ease; /* 添加平滑过渡效果 */
+        }
+
+        .mai:hover img {
+            transform: translate(-50px, 10px) scale(1.5); /* 鼠标悬停时图片移动和缩小 */
+        }
+
+        .yin{
+           width: 240px;
+           height: 280px;
+           margin-top: 170px;
+           margin-left: 1500px;
+           position: absolute;
+           z-index: 5; 
+        }
+
+        .yin img {
+            transition: transform 0.3s ease; /* 添加平滑过渡效果 */
+        }
+
+        .yin:hover img {
+            transform: translate(-50px, 10px) scale(0.9); /* 鼠标悬停时图片移动和缩小 */
+        }
+
+        .return{
+            width: 153px;
+            height: 80px;
+            opacity: 1;
+            border-radius: 30px;
+            background: rgba(255, 255, 255, 1);
+            box-shadow: 5px 4px 10px 5px rgba(0, 0, 0, 0.25);
+            margin-top: 1000px;
+            margin-left: 10px;
+            position: absolute;
+            display: inline-block;
+            /** 文本1 */
+            font-family: 'man';
+            font-size: 25px;
+            font-weight: 400;
+            letter-spacing: 0px;
+            line-height: 84px;
+            color: rgba(27, 24, 109, 1);
+            text-align: center;
+        }
+        .return a{
+            text-decoration: none;
+        }
+        .return img{
+            padding-top: -5px;
+            padding-left: -30px;
+            vertical-align: middle;
+        }
+    </style>
+</head>
+<body>
+    <div class="bodyall">
+        <div class="logo"><img src="../img/logo深蓝色更新.png"></div>
+        <div class="header">音乐</div>
+        <div class="rewind">rewind your</div>
+        <div class="music">music</div>
+        <div class="start">
+            <a href="音乐1.html">
+                start now
+            </a>
+        </div>
+        <div class="back1"><img src="../img/音乐-背景"></div>
+        <div class="back2"><img src="../img/音乐-大头照"></div>
+        <div class="mai"><img src="../img/音乐-真正麦克风"></div>
+        <div class="yin"><img src="../img/音乐-麦克风"></div>
+        <div class="return">
+            <a href="情绪调节总页.html">
+                <img src="../img/返回键.png">返回
+            </a>
+        </div>
+    </div>
+</body>
+</html>

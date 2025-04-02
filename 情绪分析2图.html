@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @font-face {
+            font-family: 'man';
+            src: url(../img/HuXiaoBoNanShenTi/HuXiaoBoNanShenTi-2.otf);
+        }
+        .bodyall{
+            width: 1800px;
+            height: 1080px;
+            margin: 0;
+            padding: 0;
+            position: relative;
+            z-index: 1;
+            overflow: hidden;
+            background: linear-gradient(180deg, rgba(5, 44, 144, 1) 0%, rgba(33, 90, 234, 1) 100%);
+        }
+        .logo{
+            width: 160px;
+            height: 60px;
+            margin-top: 20px;
+            margin-left: 20px;
+            position: absolute;
+        }
+        .huo{
+            width: 1000px;
+            height: 1100px;
+            position: absolute;
+            margin-top: 50px;
+            margin-left: -20px;
+            z-index: 5;
+        }
+
+        .huo img {
+            width: 100%;
+            transition: transform 5s ease, opacity 5s ease;
+        }
+
+
+        .huo.animate4 img {
+            transform: scale(0.5) translate(-100px, 600px); /* Adjust scale and translation as needed */
+            opacity: 0;
+        }
+
+        .huo.animate7 img {
+            transform: scale(0.7) translate(1500px, 0); /* Adjust scale and translation as needed */
+            opacity: 0;
+        }
+
+
+
+
+        .left{
+            width: 900px;
+            height: 500px;
+            margin-top: 700px;
+            margin-left: -100px;
+            position: absolute;
+            z-index: 1;
+        }
+
+        .left img {
+            width: 100%;
+            transition: transform 5s ease, opacity 5s ease;
+        }
+
+
+        .left.animate3 img {
+            transform: scale(0.9) translate(0, 600px); /* Adjust scale and translation as needed */
+            opacity: 0;
+        }
+
+        .left.animate8 img {
+            transform: scale(0.9) translate(0, -1500px); /* Adjust scale and translation as needed */
+            opacity: 0;
+        }
+
+
+        .right1{
+            width: 648px;
+            height: 440px;
+            margin-top: 1px;
+            margin-left: 1150px;
+            position: absolute;
+            z-index: 2;
+
+        }
+
+        .right1 img {
+            width: 100%;
+            transition: transform 5s ease, opacity 5s ease;
+        }
+
+
+        .right1.animate1 img {
+            transform: scale(1.8) translate(0, 600px); /* Adjust scale and translation as needed */
+            opacity: 0;
+        }
+
+
+        .right1.animate6 img {
+            transform: scale(1.0) translate(0, -600px); /* Adjust scale and translation as needed */
+            opacity: 0;
+        }
+
+
+
+        .right2{
+            height: 1024px;
+            height: 530px;
+            position: absolute;
+            margin-top: 780px;
+            margin-left: 1200px;
+            z-index: 2;
+        }
+
+        .right2 img {
+            width: 100%;
+            transition: transform 5s ease, opacity 5s ease;
+        }
+
+
+        .right2.animate2 img {
+            transform: scale(1.8) translate(0, 600px); /* Adjust scale and translation as needed */
+            opacity: 0;
+        }
+
+        .right2.animate5 img {
+            transform: scale(1.0) translate(0, -600px); /* Adjust scale and translation as needed */
+            opacity: 0;
+        }
+
+
+        .back1{
+            width: 920px;
+            height: 330px;
+            margin-top: 360px;
+            margin-left: 600px;
+            position: absolute;
+            z-index: 1;
+        }
+        .picture{
+            width: 320px;
+            height: 340px;
+            margin-top: 330px;
+            margin-left: 750px;
+            position: absolute;
+            z-index: 2;
+        }
+        .write{
+            width: 370px;
+            height: 70px;
+            position: absolute;
+            margin-top: 450px;
+            margin-left: 1100px;
+            z-index: 2;
+
+            opacity: 1;
+            
+            text-shadow: 0px 4px 4px  rgba(0, 0, 0, 0.25);
+            /** 文本1 */
+            font-family: 'man';
+            font-size: 50px;
+            font-weight: 400;
+            letter-spacing: 1px;
+            line-height: 30px;
+            color: rgba(27, 24, 109, 1);
+            text-align: left;
+            vertical-align: top;
+        }
+        .picture2{
+            width: 400px;
+            height: 90px;
+            margin-top: 550px;
+            margin-left: 1100px;
+            position: absolute;
+            z-index: 2;
+        }
+
+        .up{
+            width: 60px;
+            height: 60px;
+            position: absolute;
+            margin-top: 430px;
+            margin-left: 1550px;
+            z-index: 5;
+        }
+        .down{
+            width: 60px;
+            height: 60px;
+            position: absolute;
+            margin-top: 650px;
+            margin-left: 1550px;
+            z-index: 5;
+        }
+        .back9{
+            width: 1000px;
+            height: 500px;
+            position: absolute;
+            z-index: 0;
+            margin-top: 0;
+            margin-left: 200px;
+        }
+    </style>
+</head>
+<body>
+    <div class="bodyall">
+        <div class="logo"><img src="../img/logo浅蓝色更新.png"></div>
+        <div class="huo" id="rocket">
+            <img src="../img/情绪分析2-火箭新新新新.png">
+        </div>
+        
+        <div class="left" id="left12">
+            <img src="../img/情绪分析2-左下角云.png">
+        </div>
+        
+        <div class="right1" id="right12">
+            <img src="../img/情绪分析2-右上云新.png">
+        </div>
+        
+        <div class="right2" id="right22">
+            <img src="../img/情绪分析2-右下云新.png">
+        </div>
+        <div class="back1"><img src="../img/情绪分析2-对话框"></div>
+        <div class="picture"><img src="../img/情绪分析2-中间图片"></div>
+        <div class="write">情绪报告生成中</div>
+        <div class="picture2"><img src="../img/情绪分析2-进度条"></div>
+        <div class="up">
+            <a href="情绪分析3图.html" id="transition-link">
+                <img src="../img/上.png">
+            </a>
+        </div>
+        <div class="down">
+            <a href="情绪分析.html" id="transition-link2">
+                <img src="../img/下.png">
+            </a>
+        </div>
+        <div class="back9">
+            <img src="../img/情绪分析2-线条.png">
+        </div>
+    </div>
+</body>
+<script>
+    document.getElementById('transition-link').addEventListener('click', function(e) {
+            e.preventDefault(); // 阻止默认的点击行为
+            const rocket = document.getElementById('right12');
+            rocket.classList.add('animate1');
+            setTimeout(() => {
+                window.location.href = e.target.parentElement.href;
+            }, 1500); // 动画持续时间
+        });
+
+
+        document.getElementById('transition-link').addEventListener('click', function(e) {
+            e.preventDefault(); // 阻止默认的点击行为
+            const rocket = document.getElementById('right22');
+            rocket.classList.add('animate2');
+            setTimeout(() => {
+                window.location.href = e.target.parentElement.href;
+            }, 1500); // 动画持续时间
+        });
+
+        document.getElementById('transition-link').addEventListener('click', function(e) {
+            e.preventDefault(); // 阻止默认的点击行为
+            const rocket = document.getElementById('left12');
+            rocket.classList.add('animate3');
+            setTimeout(() => {
+                window.location.href = e.target.parentElement.href;
+            }, 1500); // 动画持续时间
+        });
+
+        document.getElementById('transition-link').addEventListener('click', function(e) {
+            e.preventDefault(); // 阻止默认的点击行为
+            const rocket = document.getElementById('rocket');
+            rocket.classList.add('animate4');
+            setTimeout(() => {
+                window.location.href = e.target.parentElement.href;
+            }, 1500); // 动画持续时间
+        });
+
+        document.getElementById('transition-link2').addEventListener('click', function(e) {
+            e.preventDefault(); // 阻止默认的点击行为
+            const rocket = document.getElementById('right22');
+            rocket.classList.add('animate5');
+            setTimeout(() => {
+                window.location.href = e.target.parentElement.href;
+            }, 1500); // 动画持续时间
+        });
+
+
+        document.getElementById('transition-link2').addEventListener('click', function(e) {
+            e.preventDefault(); // 阻止默认的点击行为
+            const rocket = document.getElementById('right12');
+            rocket.classList.add('animate6');
+            setTimeout(() => {
+                window.location.href = e.target.parentElement.href;
+            }, 1500); // 动画持续时间
+        });
+
+
+        document.getElementById('transition-link2').addEventListener('click', function(e) {
+            e.preventDefault(); // 阻止默认的点击行为
+            const rocket = document.getElementById('rocket');
+            rocket.classList.add('animate7');
+            setTimeout(() => {
+                window.location.href = e.target.parentElement.href;
+            }, 1500); // 动画持续时间
+        });
+
+
+        document.getElementById('transition-link2').addEventListener('click', function(e) {
+            e.preventDefault(); // 阻止默认的点击行为
+            const rocket = document.getElementById('left12');
+            rocket.classList.add('animate8');
+            setTimeout(() => {
+                window.location.href = e.target.parentElement.href;
+            }, 1500); // 动画持续时间
+        });
+</script>
+</html>
